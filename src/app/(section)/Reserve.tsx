@@ -2,108 +2,28 @@
 import { useEffect } from "react";
 import gsap, { Power4 } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SplitType from 'split-type';
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 
 const Reserve = ({ }) => {
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger)
-        const mm = gsap.matchMedia();
-        mm.add("(max-width:500px)", () => {
-            gsap.to('.reserve-one', {
-                scrollTrigger: {
-                    trigger: ".reserve-one",
-                    toggleActions: 'restart none none none',
-                    // start: "top 80%", // When the top of the .title enters 80% of the viewport
-                    // end: "top 50%",   // When the top of the .title reaches 50% of the viewport
-                    // scrub: true
-                },
-                x: 0,
-                scale: 1,
-                ease: Power4.easeOut,
-                duration: 0.8
 
-            })
-
-            gsap.to('.reserve-two', {
-                scrollTrigger: {
-                    trigger: ".reserve-two",
-                    toggleActions: 'restart none none none',
-                    // start: "top 80%", // When the top of the .title enters 80% of the viewport
-                    // end: "top 50%",   // When the top of the .title reaches 50% of the viewport
-                    // scrub: true
-                },
-                x: 0,
-                scale: 1,
-                ease: Power4.easeOut,
-                duration: 0.8
-
-            })
-
-        })
-
-        mm.add("(min-width:501px)", () => {
-            gsap.to('.reserve-one', {
-                scrollTrigger: {
-                    trigger: ".reserve-one",
-                    toggleActions: 'restart none none none',
-                    // start: "top 80%", // When the top of the .title enters 80% of the viewport
-                    // end: "top 50%",   // When the top of the .title reaches 50% of the viewport
-                    // scrub: true
-                },
-                x: 30,
-                scale: 1,
-                ease: Power4.easeOut,
-                duration: 0.8
-
-            })
-            gsap.to('.reserve-two', {
-                scrollTrigger: {
-                    trigger: ".reserve-two",
-                    toggleActions: 'restart none none none',
-                    // start: "top 80%", // When the top of the .title enters 80% of the viewport
-                    // end: "top 50%",   // When the top of the .title reaches 50% of the viewport
-                    // scrub: true
-                },
-                x: 0,
-                scale: 1,
-                ease: Power4.easeOut,
-                duration: 0.8
-
-            })
-        })
-        gsap.to('.reserve-image', {
+        gsap.to('.reserve-head', {
             scrollTrigger: {
-                trigger: ".reserve-image",
+                trigger: ".reserve-head",
                 toggleActions: 'restart none none none',
                 // start: "top 80%", // When the top of the .title enters 80% of the viewport
                 // end: "top 50%",   // When the top of the .title reaches 50% of the viewport
-                // scrub: true
+                scrub: true
             },
+            x: 0,
             scale: 1,
+            duration: 0.8,
             ease: Power4.easeOut,
-            duration: 1.5
+
         })
 
-        const splitType = document.querySelectorAll(".head-reserve")
-        splitType.forEach((char, i) => {
-            if (char instanceof HTMLElement) {
-                const text = new SplitType(char, { types: "chars" })
-                gsap.from(text.chars, {
-                    scrollTrigger: {
-                        trigger: char,
-                        start: 'top 80%',
-                        end: 'top 20%',
-                        scrub: true,
-                        markers: false
-                    },
-                    opacity: 0.2,
-                    stagger: 0.2
-                })
-            }
-        })
 
     }, [])
     return (
@@ -133,7 +53,11 @@ const Reserve = ({ }) => {
                 />
             </div>
             <div className="relative flex flex-col gap-9 md:gap-14 h-fit bg-transparent w-full items-center justify-center px-3 lg:p-0 py-12 lg:py-24 overflow-hidden z-40">
-                <p className="w-full text-center font-cormorant font-[400] text-[#FFF5DD] text-2xl md:text-6xl uppercase">Celebrating <br />authentic Mexican <br />traditions</p>
+                <p className="w-full text-center font-cormorant font-[400] text-[#FFF5DD] text-2xl md:text-6xl uppercase reserve-head"
+                    style={{
+                        transform: "scale(0.6)"
+                    }}
+                >Celebrating <br />authentic Mexican <br />traditions</p>
                 <div className="z-30 flex flex-col md:flex-row gap-5 lg:gap-9 h-full w-full max-w-[1300px] items-center justify-center md:pr-14">
                     <div className="w-full md:w-1/2 flex items-start justify-center gap-2">
                         <div className="flex gap-2 items-center justify-center">

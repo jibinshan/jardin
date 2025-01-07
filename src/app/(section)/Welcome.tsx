@@ -5,7 +5,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SplitType from 'split-type';
 import Image from "next/image";
 import { Bounce } from "gsap";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 const WelcomeRes = ({ }) => {
@@ -133,7 +132,7 @@ const WelcomeRes = ({ }) => {
 
                     <div className="relative w-full flex justify-center items-center">
                         <div className="absolute w-full top-24 md:top-40 flex justify-center items-start">
-                            <p className="text-3xl md:text-7xl font-cormorant text-center font-[400] uppercase"><span className="md:text-primary-foreground">U</span>pscale Mexica<span className="md:text-primary-foreground">n</span><br /> <span className="md:text-primary-foreground">D</span>ining in Watfor<span className="md:text-primary-foreground">d</span></p>
+                            <p className="text-3xl md:text-7xl font-cormorant text-center font-[400] uppercase floating"><span className="md:text-primary-foreground">U</span>pscale Mexica<span className="md:text-primary-foreground">n</span><br /> <span className="md:text-primary-foreground">D</span>ining in Watfor<span className="md:text-primary-foreground">d</span></p>
                         </div>
                         <div className="absolute w-full bottom-24 flex flex-col justify-center items-center gap-10 py-4">
                             <Image

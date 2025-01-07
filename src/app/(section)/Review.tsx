@@ -8,7 +8,6 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel";
 import { useRestaurant } from "@/context/RestaurantContext";
-import Image from "next/image";
 import { useEffect } from "react";
 import gsap, { Power2 } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
