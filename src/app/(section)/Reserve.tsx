@@ -27,7 +27,7 @@ const Reserve = ({ }) => {
 
     }, [])
     return (
-        <section id="reserve" className="relative flex w-full items-center justify-center overflow-hidden"
+        <section id="reserve" className="relative flex w-full items-center justify-center overflow-hidden bg-fixed"
             style={{
                 backgroundImage: "url('/images/home/celebrate/bg.png')",
                 backgroundSize: "cover",
@@ -35,7 +35,7 @@ const Reserve = ({ }) => {
                 backgroundPosition: "center center"
             }}
         >
-            <div className="absolute w-full h-full left-0 top-0 flex justify-center items-center"
+            <div className="absolute w-full h-full left-0 top-0 flex justify-center items-center bg-fixed"
                 style={{
                     backgroundImage: "url('/images/home/celebrate/star.svg'), url('/images/home/celebrate/topleft.png')",
                     backgroundSize: "15% , 8%",
@@ -43,7 +43,7 @@ const Reserve = ({ }) => {
                     backgroundPosition: "center right, center left"
                 }}
             >
-                <div className="w-full max-w-[1300px] h-full"
+                <div className="w-full max-w-[1300px] h-full bg-fixed"
                     style={{
                         backgroundImage: "url('/images/home/celebrate/bottom.png')",
                         backgroundSize: "20%",

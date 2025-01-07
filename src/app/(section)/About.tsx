@@ -14,8 +14,8 @@ const About = ({ }) => {
                 // end: "top 50%",   // When the top of the .title reaches 50% of the viewport
                 scrub: true
             },
-            x: 100,
-            y: 100,
+            x: 150,
+            y: 0,
             duration: 0.8
 
         })
@@ -28,8 +28,8 @@ const About = ({ }) => {
                 // end: "top 50%",   // When the top of the .title reaches 50% of the viewport
                 scrub: true
             },
-            x: 100,
-            y: 100,
+            x: 150,
+            y: 0,
             duration: 0.8
 
         })
@@ -42,8 +42,8 @@ const About = ({ }) => {
                 // end: "top 50%",   // When the top of the .title reaches 50% of the viewport
                 scrub: true
             },
-            x: -100,
-            y: 30,
+            x: -150,
+            y: 0,
             duration: 0.8
 
         })
@@ -56,8 +56,8 @@ const About = ({ }) => {
                 // end: "top 50%",   // When the top of the .title reaches 50% of the viewport
                 scrub: true
             },
-            x: -100,
-            y: 40,
+            x: -150,
+            y: 0,
             duration: 0.8
 
         })
@@ -82,7 +82,7 @@ const About = ({ }) => {
 
     }, [])
     return (
-        <section id="about" className="relative flex w-full items-center justify-center bg-[#33281b] overflow-hidden py-12 md:py-24 px-4">
+        <section id="about" className="relative flex w-full items-center justify-center bg-[#33281b] overflow-hidden py-12 md:pt-[350px] md:pb-44 px-4">
             <div className="absolute w-full h-full left-0 top-0 py-12 md:py-24">
                 <div className="h-full w-full"
                     style={{
@@ -94,8 +94,8 @@ const About = ({ }) => {
                 />
             </div>
             <div className="absolute w-full h-full left-0 top-0 flex justify-center items-center py-24 z-40">
-                <div className="w-full h-full max-w-[1100px] flex justify-between items-start px-4">
-                    <p className="w-full max-w-[700px] text-xl md:text-5xl text-[#ECE6D6] font-cormorant uppercase font-[400]">Step into an
+                <div className="w-full h-full md:px-[190px] flex justify-between items-start px-4">
+                    <p className="w-full max-w-[850px] text-xl md:text-7xl text-[#ECE6D6] font-cormorant uppercase font-[400]">Step into an
                         oasis of minimal
                         & modern decor with lush greenery, </p>
                     <Image
@@ -103,50 +103,50 @@ const About = ({ }) => {
                         width={228}
                         height={228}
                         alt="top"
-                        className="w-12 md:w-32"
+                        className="w-12 md:w-1/6"
                     />
                 </div>
             </div>
-            <div className="w-full max-w-[1300px] h-[45vh] md:h-[80vh] flex justify-center items-end md:items-center">
-                <div className="relative w-full md:w-1/2 h-fit flex justify-center items-center">
-                    <div className="hidden md:flex absolute w-full h-full -left-16 top-20">
+            <div className="w-full md:px-[120px] h-[45vh] md:h-[80vh] flex justify-center items-end md:items-center">
+                <div className="relative w-full md:w-1/2 h-fit flex justify-center items-center aspect-square">
+                    <div className="hidden md:flex absolute w-full h-full -left-1/4 top-1/4">
                         <Image
-                            src='/images/home/about/food1.png'
+                            src='/images/home/about/food2.png'
                             width={391}
                             height={302}
                             alt="top"
-                            className="w-44 h-36 about-one"
+                            className="w-1/2 h-52 about-one"
                         />
                     </div>
-                    <div className="hidden absolute w-full h-full -left-16 -bottom-20 md:flex items-end">
+                    <div className="hidden absolute w-full h-full -left-16 -bottom-16 md:flex items-end">
                         <Image
-                            src='/images/home/about/food2.png'
+                            src='/images/home/about/food4.png'
                             width={390}
                             height={261}
                             alt="top"
-                            className="w-44 about-two"
+                            className="w-1/2 about-two"
                         />
                     </div>
-                    <div className="hidden absolute w-full h-full -right-16 -top-10 md:flex items-start justify-end">
+                    <div className="hidden absolute w-full h-full -right-16 top-10 md:flex items-start justify-end">
                         <Image
                             src='/images/home/about/food3.png'
                             width={204}
                             height={276}
                             alt="top"
-                            className="w-44 about-three"
+                            className="w-1/3 about-three"
                         />
                     </div>
-                    <div className="hidden absolute w-full h-full -right-16 -bottom-10 md:flex items-end justify-end">
+                    <div className="hidden absolute w-full h-full -right-16 -bottom-16 md:flex items-end justify-end">
                         <Image
-                            src='/images/home/about/food4.png'
+                            src='/images/home/about/food1.png'
                             width={394}
                             height={249}
                             alt="top"
-                            className="w-44 about-four"
+                            className="w-1/2 about-four"
                         />
                     </div>
                     <video
-                        className="w-full object-contain"
+                        className="min-h-full min-w-full object-cover"
                         style={{
                             objectPosition: "center"
                         }}
