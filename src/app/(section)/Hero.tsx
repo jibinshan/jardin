@@ -19,7 +19,7 @@ const HeroSection: React.FC = () => {
           ></video>
         </div>
         <div className="absolute left-0 top-0 h-full w-full bg-black/30" />
-        <div className="z-10 flex w-full md:px-[120px] flex-col items-center md:items-start justify-center gap-4">
+        <div className="z-10 flex w-full md:px-[120px] flex-col items-center md:items-start justify-center gap-10">
           <p className="w-full text-center md:text-start font-cormorant text-4xl font-[400] text-white md:text-8xl uppercase lg:leading-[94px]">
             <span className="text-primary">Jardín</span> <br />
             Mexican Cocina<br />
