@@ -131,10 +131,10 @@ const WelcomeRes = ({ }) => {
                     </div>
 
                     <div className="relative w-full flex justify-center items-center">
-                        <div className="absolute w-full top-24 md:top-40 flex justify-center items-start">
+                        <div className="absolute w-full top-16 md:top-40 flex justify-center items-start">
                             <p className="text-3xl md:text-7xl font-cormorant text-center font-[400] uppercase floating"><span className="md:text-primary-foreground">U</span>pscale Mexica<span className="md:text-primary-foreground">n</span><br /> <span className="md:text-primary-foreground">D</span>ining in Watfor<span className="md:text-primary-foreground">d</span></p>
                         </div>
-                        <div className="absolute w-full bottom-24 flex flex-col justify-center items-center gap-10 py-4">
+                        <div className="absolute w-full bottom-6 md:bottom-24 flex flex-col justify-center items-center gap-4 md:gap-10 py-4">
                             <Image
                                 src="/images/home/about/flower.png"
                                 width={93}
@@ -142,7 +142,7 @@ const WelcomeRes = ({ }) => {
                                 alt="welcome"
                                 className="max-w-16"
                             />
-                            <p className="text-2xl font-cormorant text-center text-[#ECE6D6] max-w-[600px] font-[400]">Welcome to Jardín, an upscale Mexican dining destination where the vibrant flavors of the jungles in Southern Mexico collide with the soul of the northern deserts</p>
+                            <p className="text-lg md:text-2xl font-cormorant text-center text-[#ECE6D6] -ml-3 md:ml-0 md:max-w-[600px] font-[400]">Welcome to Jardín, an upscale Mexican dining destination where the vibrant flavors of the jungles in Southern Mexico collide with the soul of the northern deserts</p>
                         </div>
                         <Image
                             src="/images/home/about/about.png"

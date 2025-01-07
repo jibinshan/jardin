@@ -19,14 +19,14 @@ const HeroSection: React.FC = () => {
           ></video>
         </div>
         <div className="absolute left-0 top-0 h-full w-full bg-black/30" />
-        <div className="z-10 flex w-full max-w-[1200px] flex-col items-center md:items-start justify-center gap-4">
-          <p className="w-full text-center md:text-start font-cormorant text-4xl font-[400] text-white md:text-7xl uppercase lg:leading-[74px]">
+        <div className="z-10 flex w-full md:px-[120px] flex-col items-center md:items-start justify-center gap-4">
+          <p className="w-full text-center md:text-start font-cormorant text-4xl font-[400] text-white md:text-8xl uppercase lg:leading-[94px]">
             <span className="text-primary">Jardín</span> <br />
             Mexican Cocina<br />
-            & Tequila Bar
+            {'  '} & Tequila Bar
           </p>
           <Link href='/table-booking'>
-            <Button className="rounded-none px-5 py-6 font-cormorant font-[400] capitalize text-xl text-white border-white" variant='outline' size='lg'>
+            <Button className="rounded-none px-7 py-7 font-cormorant font-[600] tracking-[3px] text-base text-white border-white uppercase" variant='outline' size='lg'>
               Book Table
             </Button>
           </Link>
