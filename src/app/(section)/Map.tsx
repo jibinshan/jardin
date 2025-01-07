@@ -11,7 +11,7 @@ const Map = ({ }) => {
                 allowFullScreen={false}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="w-full h-[350px]"
+                className="w-full h-[600px]"
             ></iframe>
         </section >
     )

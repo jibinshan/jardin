@@ -98,9 +98,9 @@ const Reviews = ({ }) => {
                     backgroundPosition: "top left"
                 }}
             />
-            <div className="flex h-full w-full max-w-[1300px] flex-col items-start justify-center gap-4 z-20">
+            <div className="flex h-full w-full flex-col items-start justify-center gap-4 z-20">
                 <div className="flex h-full w-full flex-col items-center justify-center gap-4 lg:gap-8">
-                    <p className="font-cormorant font-[500] capitalize text-primary-foreground text-xl text-center py-3 px-5 rounded-full border-[1px] border-primary-foreground">
+                    <p className="font-playfair font-[500] capitalize text-primary-foreground text-2xl text-center py-3 px-7 rounded-full border-[1px] border-primary-foreground">
                         Reviews
                     </p>
                     <p className="font-cormorant non-italic uppercase text-primary-foreground font-[600] text-2xl md:text-5xl text-center flex gap-3 justify-center items-center">
@@ -117,11 +117,11 @@ const Reviews = ({ }) => {
                     }}
                 >
                     {reviews && (
-                        <Carousel className="w-full px-4">
+                        <Carousel className="w-full px-4 md:px-0">
                             <CarouselContent className="ml-4 flex h-fit w-full justify-center gap-4">
                                 {reviews.map((review, index) => (
                                     <CarouselItem key={index} className="md:basis-1/2 flex justify-center border-[1px] border-primary py-7 md:py-12">
-                                        <div className="w-full flex flex-col px-3 gap-7">
+                                        <div className="w-full flex flex-col px-3  gap-7">
                                             <div className="relative w-full px-4 md:h-fit flex flex-col gap-3 justify-center items-center">
                                                 <div className="flex w-full justify-center z-20">
                                                     <Icons.star key={index} className="text-primary" />

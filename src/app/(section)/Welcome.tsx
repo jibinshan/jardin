@@ -118,7 +118,7 @@ const WelcomeRes = ({ }) => {
                         }}
                     />
                 </div>
-                <div className="z-30 flex flex-col gap-5 lg:gap-9 h-full w-full md:px-[120px] items-center justify-center">
+                <div className="z-30 flex flex-col gap-5 lg:gap-24 h-full w-full md:px-[120px] items-center justify-center">
                     <div className="px-5 py-6 rounded-full flex gap-4 items-center justify-center">
                         <Image
                             src="/images/home/about/delivery.png"
@@ -152,20 +152,22 @@ const WelcomeRes = ({ }) => {
                             className="w-full md:w-3/4"
                         />
                     </div>
-                    <div className="w-full md:w-3/4 flex flex-col gap-3 justify-start items-start">
-                        <p className="text-primary-foreground font-[400] font-cormorant text-3xl md:text-5xl">About Jardín</p>
-                        <p className="w-full text-3xl md:text-4xl text-primary-foreground font-cormorant font-[400] leading-[30px] uppercase">
-                            Welcome to Jardín, an upscale Mexican dining destination where the vibrant flavors of the jungles in Southern Mexico collide with the soul of the northern deserts
-                        </p>
-                    </div>
-                    <div className="w-full md:w-3/4 flex md:justify-end">
-                        <p className="w-full md:w-2/3 text-xl md:text-2xl text-primary-foreground font-cormorant font-[400]">
-                            Our culinary team draws inspiration from the diverse landscapes of Mexico, blending the bold, earthy flavors of the northern deserts with the fresh, vibrant tastes of the southern jungles. Every dish is crafted with the utmost care and creativity, using the highest quality ingredients to ensure the freshest flavors.
-                        </p>
+                    <div className="w-full flex flex-col items-center justify-center gap-5 md:gap-12">
+                        <div className="w-full md:w-3/4 flex flex-col gap-3 justify-start items-start">
+                            <p className="text-primary-foreground font-[400] font-cormorant text-3xl md:text-5xl">About Jardín</p>
+                            <p className="w-full text-3xl md:text-4xl text-primary-foreground font-cormorant font-[400] leading-[30px] uppercase">
+                                Welcome to Jardín, an upscale Mexican dining destination where the vibrant flavors of the jungles in Southern Mexico collide with the soul of the northern deserts
+                            </p>
+                        </div>
+                        <div className="w-full md:w-3/4 flex md:justify-end">
+                            <p className="w-full md:w-2/3 text-xl md:text-2xl text-primary-foreground font-cormorant font-[400]">
+                                Our culinary team draws inspiration from the diverse landscapes of Mexico, blending the bold, earthy flavors of the northern deserts with the fresh, vibrant tastes of the southern jungles. Every dish is crafted with the utmost care and creativity, using the highest quality ingredients to ensure the freshest flavors.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     );
 };
 

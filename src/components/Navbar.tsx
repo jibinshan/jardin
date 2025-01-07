@@ -46,7 +46,7 @@ const Navbar = ({
         </Link>
 
         <div className={cn(
-          "hidden md:flex flex-row relative items-center min-w-full h-full justify-between gap-12 border-b-[0.5px] border-b-[#75716d]",
+          "hidden md:flex flex-row relative items-center min-w-full h-full justify-between gap-12 border-b-[0.1px] border-b-[#75716d]",
         )} >
           <Link href="/">
             <Image src="/images/logo.png" width={191} height={70} alt="logo" className="w-32 z-20 ml-10" />

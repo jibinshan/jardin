@@ -17,26 +17,19 @@ const Menu = ({ }) => {
             )} >
                 <div className="w-full pt-24 pb-12 flex justify-center items-center bg-[#034426]">
                     <div className="w-full max-w-[1300px] flex justify-between items-center">
-                        <p className="text-[#ECE6D6] text-lg py-4 px-6 rounded-full border-[1px] border-[#2c6146]">
+                        <p className="text-[#ECE6D6] text-lg py-4 px-6 rounded-full border-[1px] border-[#2c6146] uppercase font-cormorant font-[400] md:text-2xl">
                             Make Your Menu Selection
                         </p>
-                        <Link href='/menu'>
-                            <Button className="hero-button flex items-center justify-center gap-3 px-10 py-7 text-white rounded-none bg-transparent border-[1px] border-white font-playfair font-[600]" variant='image'
-                                style={{
-                                    borderRadius: "50%"
-                                }}
-                            >View Menu</Button>
-                        </Link>
                     </div>
                 </div>
                 <div className={cn("menu-section w-full pb-12 h-[30vh] flex flex-col gap-5 justify-start items-center bg-[#034426] z-10 transition-all duration-500 ease-in",
-                    select === 1 && "h-fit md:h-[100vh]",
+                    select === 1 && "h-fit md:h-fit",
                     select !== 0 && 'static'
                 )}>
                     <div className="w-full max-w-[1300px] flex justify-between items-start">
                         <div className="flex justify-center items-center gap-4">
-                            <p className="font-prata capitalize text-2xl">01</p>
-                            <p className="font-playfair capitalize text-7xl">Lunch</p>
+                            <p className="font-cormorant font-[400] uppercase text-2xl">01</p>
+                            <p className="font-cormorant text-3xl md:text-7xl uppercase">Lunch</p>
                         </div>
                         <div className="p-3 rounded-full shadow-lg bg-[#0e603a]" onClick={() => setSelect((prev) => prev === 1 ? 0 : 1)}>
                             <ChevronUp className={cn("text-white transition-all duration-500 ease-in",
@@ -130,13 +123,13 @@ const Menu = ({ }) => {
                 </div>
             </div>
             <div className={cn("menu-section w-full py-12 h-[50vh] flex flex-col gap-5  justify-start items-center bg-[#035731] sticky top-[300px] z-20 transition-all duration-500 ease-in",
-                select === 2 && "h-fit md:h-[100vh]",
+                select === 2 && "h-fit md:h-fit",
                 select !== 0 && 'static'
             )} >
                 <div className="w-full max-w-[1300px] flex justify-between items-start">
                     <div className="flex justify-center items-center gap-4">
-                        <p className="font-prata capitalize text-2xl">02</p>
-                        <p className="font-playfair capitalize text-7xl">Dinner</p>
+                        <p className="font-cormorant font-[400] uppercase text-2xl">02</p>
+                        <p className="font-cormorant text-3xl md:text-7xl uppercase">Dinner</p>
                     </div>
                     <div className="p-3 rounded-full shadow-lg bg-[#0e603a]" onClick={() => setSelect((prev) => prev === 2 ? 0 : 2)}>
                         <ChevronUp className={cn("text-white transition-all duration-500 ease-in",
@@ -229,13 +222,13 @@ const Menu = ({ }) => {
             </div>
             <div className=
                 {cn("menu-section w-full py-12 h-[50vh] flex flex-col gap-5 justify-start items-center bg-[#2d7323] sticky top-[300px] z-30 transition-all duration-500 ease-in",
-                    select === 3 && "h-fit md:h-[100vh]",
+                    select === 3 && "h-fit md:h-fit",
                 )}
             >
                 <div className="w-full max-w-[1300px] flex justify-between items-start">
                     <div className="flex justify-center items-center gap-4">
-                        <p className="font-prata capitalize text-2xl">03</p>
-                        <p className="font-playfair capitalize text-7xl">Drinks</p>
+                        <p className="font-cormorant font-[400] uppercase text-2xl">03</p>
+                        <p className="font-cormorant text-3xl md:text-7xl uppercase">Drinks</p>
                     </div>
                     <div className="p-3 rounded-full shadow-lg bg-[#367d2b]" onClick={() => setSelect((prev) => prev === 3 ? 0 : 3)}>
                         <ChevronUp className={cn("text-white transition-all duration-500 ease-in",

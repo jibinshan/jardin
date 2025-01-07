@@ -58,8 +58,8 @@ const Reserve = ({ }) => {
                         transform: "scale(0.6)"
                     }}
                 >Celebrating <br />authentic Mexican <br />traditions</p>
-                <div className="z-30 flex flex-col md:flex-row gap-5 lg:gap-9 h-full w-full max-w-[1300px] items-center justify-center md:pr-14">
-                    <div className="w-full md:w-1/2 flex items-start justify-center gap-2">
+                <div className="z-30 flex flex-col md:flex-row gap-5 lg:gap-10 h-full w-full md:px-[140px] items-center md:items-start justify-center">
+                    <div className="w-full md:w-1/2 flex items-start justify-start gap-2">
                         <div className="flex gap-2 items-center justify-center">
                             <Image
                                 src='/images/home/celebrate/1.png'
@@ -72,7 +72,7 @@ const Reserve = ({ }) => {
                                 width={261}
                                 height={691}
                                 alt="2"
-                                className="max-h-[560px] max-w-[200px]"
+                                className="md:max-w-[230px]"
                             />
                         </div>
                         <Image
@@ -83,15 +83,15 @@ const Reserve = ({ }) => {
                             className="mt-8"
                         />
                     </div>
-                    <div className="w-full md:w-1/2 flex flex-col justify-center items-center">
-                        <div className="w-full max-w-[700px] space-y-8">
+                    <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:py-12">
+                        <div className="w-full max-w-[550px] space-y-8">
                             <p className="font-cormorant text-[#FFF5DD] font-[400] text-lg">Our culinary team draws inspiration from the diverse landscapes of Mexico, blending the bold, earthy flavors of the northern deserts with the fresh, vibrant tastes of the southern jungles. Every dish is crafted with the utmost care and creativity, using the highest quality ingredients to ensure the freshest flavors.Our tortillas are made in-house. Our traditional sauces, arbol, habanero ashes, and verde taquera, are all made from scratch. Complementing our cuisine is an extensive selection of the finest tequilas, carefully chosen to enhance your dining experience</p>
                             <Button className="font-cormorant font-[600] px-7 py-8 tracking-[3px] bg-primary-foreground text-white text-lg uppercase rounded-none">book table</Button>
                         </div>
                     </div>
                 </div>
             </div>
-        </section >
+        </section>
     );
 };
 
