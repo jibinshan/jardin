@@ -165,17 +165,21 @@ const About = ({ }) => {
                     </div>
                     <video
                         className="w-full object-contain"
-                        style={{ objectPosition: "center" }}
+                        style={{
+                            objectPosition: "center"
+                        }}
                         src="/video/about.mp4"
                         autoPlay
                         loop
                         muted
                         playsInline
+                        // width={813}
+                        // height={769}
                         poster=""
                     ></video>
                 </div>
             </div>
-        </section>
+        </section >
     );
 };
 

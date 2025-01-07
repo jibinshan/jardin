@@ -90,16 +90,21 @@ const Reviews = ({ }) => {
     }, [])
     const text = 'Hear Our Guests'
     return (
-        <section className="relative flex h-full w-full justify-center md:justify-end">
-            <div className="lines">
-                <div className="line"></div>
-                <div className="line"></div>
-                <div className="line"></div>
-                <div className="line"></div>
-            </div>
-            <div className="flex h-full w-full max-w-[1160px] flex-col items-start justify-center gap-4 py-12 md:pb-24 z-40 md:pr-14">
-                <div className="flex h-full w-full flex-col items-center justify-center gap-2 lg:gap-4">
-                    <p className="font-jost non-italic font-light uppercase text-black text-2xl md:text-5xl text-center flex gap-3 justify-center items-center">
+        <section className="relative flex h-full w-full justify-center items-center bg-background py-12 pb-32 md:py-34 overflow-hidden">
+            <div className="absolute w-full h-full left-0 top-0 z-10"
+                style={{
+                    backgroundImage: "url('/images/home/reviews/reviewtop.png')",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "15%",
+                    backgroundPosition: "top left"
+                }}
+            />
+            <div className="flex h-full w-full max-w-[1300px] flex-col items-start justify-center gap-4 z-20">
+                <div className="flex h-full w-full flex-col items-center justify-center gap-4 lg:gap-8">
+                    <p className="font-cormorant font-[500] capitalize text-primary-foreground text-xl text-center py-3 px-5 rounded-full border-[1px] border-primary-foreground">
+                        Reviews
+                    </p>
+                    <p className="font-cormorant non-italic uppercase text-primary-foreground font-[600] text-2xl md:text-5xl text-center flex gap-3 justify-center items-center">
                         {text.split("").map((char, index) => (
                             <span key={index} className="key head-review" >
                                 {char === " " ? "\u00A0" : char}
@@ -116,39 +121,36 @@ const Reviews = ({ }) => {
                         <Carousel className="w-full px-4">
                             <CarouselContent className="ml-4 flex h-fit w-full justify-center gap-4">
                                 {reviews.map((review, index) => (
-                                    <CarouselItem
-                                        key={index}
-                                        className="flex w-full basis-full flex-col gap-6 rounded-none px-6 py-8 md:basis-1/3 border-[2px] bg-[#f2f8ee] border-[#f2f8ee]"
-                                    >
-
-                                        <div className="flex w-full">
-                                            {/* {Array.from({ length: review.rating }).map((_, index) => (
-                                                <Icons.star key={index} className="text-[#fec679]" />
-                                            ))} */}
-                                            <Icons.star key={index} className="text-[#fec679]" />
-                                            <Icons.star key={index} className="text-[#fec679]" />
-                                            <Icons.star key={index} className="text-[#fec679]" />
-                                            <Icons.star key={index} className="text-[#fec679]" />
-                                            <Icons.star key={index} className="text-[#fec679]" />
-                                        </div>
-                                        <div className="">
-                                            <p className="text-black h-[240px]  line-clamp-4">{review.text}</p>
-                                        </div>
-                                        <div className="flex w-full items-center gap-2">
-                                            <Image
-                                                src={
-                                                    review.profile_photo_url ||
-                                                    "/images/home/reviews/pictures/anna-mathew.svg"
-                                                }
-                                                width={64}
-                                                height={64}
-                                                alt={review.author_name}
-                                            />
-                                            <div className="flex flex-col gap-2">
-                                                <p className="text-black">{review.author_name}</p>
-                                                <span className="text-black">
-                                                    {review.relative_time_description}
-                                                </span>
+                                    <CarouselItem key={index} className="md:basis-1/2 flex justify-center border-[1px] border-primary py-7 md:py-12">
+                                        <div className="w-full flex flex-col px-3 gap-7">
+                                            <div className="relative w-full px-4 md:h-fit flex flex-col gap-3 justify-center items-center">
+                                                <div className="flex w-full justify-center z-20">
+                                                    <Icons.star key={index} className="text-primary" />
+                                                    <Icons.star key={index} className="text-primary" />
+                                                    <Icons.star key={index} className="text-primary" />
+                                                    <Icons.star key={index} className="text-primary" />
+                                                    <Icons.star key={index} className="text-primary" />
+                                                </div>
+                                                <div className="z-20">
+                                                    <p className="text-primary-foreground font-[400] font-cormorant text-lg line-clamp-5 text-center">{review.text}</p>
+                                                </div>
+                                            </div>
+                                            <div className="w-full flex flex-col items-center justify-center">
+                                                {/* <Image
+                                                    src={
+                                                        review.profile_photo_url ||
+                                                        "/images/home/reviews/pictures/anna-mathew.svg"
+                                                    }
+                                                    width={64}
+                                                    height={64}
+                                                    alt={review.author_name}
+                                                /> */}
+                                                <div className="flex flex-col justify-center items-center">
+                                                    <p className="text-primary-foreground font-[500] font-playfair text-xl">-{review.author_name}-</p>
+                                                    {/* <span className="text-[#9C9995]">
+                                                        {review.relative_time_description}
+                                                    </span> */}
+                                                </div>
                                             </div>
                                         </div>
                                     </CarouselItem>

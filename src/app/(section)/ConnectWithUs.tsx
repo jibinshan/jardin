@@ -7,6 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SplitType from 'split-type';
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Icons } from "@/components/Icon";
 
 const ConnectWithUs = ({ }) => {
 
@@ -124,90 +125,72 @@ const ConnectWithUs = ({ }) => {
   return (
     <section
       id="connect"
-      className="relative flex w-full items-center justify-center md:justify-end overflow-hidden bg-transparent md:pr-7"
+      className="relative flex w-full items-center justify-center overflow-hidden bg-background px-4"
     >
-      <div className="lines">
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
-      </div>
-      <div className="absolute left-6/12 top-5/12 flex items-center justify-center w-full h-full overflow-hidden"
-      // style={{
-      //   borderRadius: '1533px',
-      //   background: 'radial-gradient(50% 50% at 50% 50%, rgba(226, 161, 75, 0.14) 0%, rgba(0, 0, 0, 0.00) 100%)',
-      //   filter: 'blur(67px)',
-      // }}
-      >
-      </div>
-      <div className="max-w-[1100px] px-4 py-12 lg:px-0 lg:py-24 flex flex-col gap-12 z-40">
-
-        <div className="flex w-full flex-col items-center justify-center lg:flex-row">
-
-          <div className="w-full flex flex-col gap-3 justify-center items-center">
-            <p className="font-jost non-italic font-light uppercase text-black text-xl md:text-5xl text-center flex gap-3 justify-center items-center">
-              {text.split("").map((char, index) => (
-                <span key={index} className="key head-connect" >
-                  {char === " " ? "\u00A0" : char}
-                </span>
-              ))}
-            </p>
-          </div>
-          {/* <div className="mt-10 flex items-center gap-7">
-              <CarouselPrevious className="static" variant="ghost" />
-              <CarouselNext className="static" />
-            </div> */}
+      <div className="relative w-full flex">
+        <div className="grid w-full grid-cols-4 md:gap-2">
+          <Image
+            src="/images/home/connect/1.png"
+            width={380}
+            height={395}
+            alt="alt"
+            className="z-30 max-h-[250px] object-cover md:h-[300px] lg:max-h-[400px]"
+          />
+          <Image
+            src="/images/home/connect/2.png"
+            width={380}
+            height={395}
+            alt="alt"
+            className="z-30 max-h-[250px] object-cover md:h-[300px] lg:max-h-[400px]"
+          />
+          <Image
+            src="/images/home/connect/3.png"
+            width={380}
+            height={395}
+            alt="alt"
+            className="z-30 max-h-[250px] object-cover md:h-[300px] lg:max-h-[400px]"
+          />
+          <Image
+            src="/images/home/connect/4.png"
+            width={380}
+            height={395}
+            alt="alt"
+            className="z-30 max-h-[250px] object-cover md:h-[300px] lg:max-h-[400px]"
+          />
+          <Image
+            src="/images/home/connect/5.png"
+            width={380}
+            height={395}
+            alt="alt"
+            className="z-30 max-h-[250px] object-cover md:h-[300px] lg:max-h-[400px]"
+          />
+          <Image
+            src="/images/home/connect/6.png"
+            width={380}
+            height={395}
+            alt="alt"
+            className="z-30 max-h-[250px] object-cover md:h-[300px] lg:max-h-[400px]"
+          />
+          <Image
+            src="/images/home/connect/7.png"
+            width={380}
+            height={395}
+            alt="alt"
+            className="z-30 max-h-[250px] object-cover md:h-[300px] lg:max-h-[400px]"
+          />
+          <Image
+            src="/images/home/connect/8.png"
+            width={380}
+            height={395}
+            alt="alt"
+            className="z-30 max-h-[250px] object-cover md:h-[300px] lg:max-h-[400px]"
+          />
         </div>
-        <div className="w-full max-w-[1300px] flex flex-col md:flex-row justify-center items-center md:justify-between gap-6">
-          <div className="relative reveal-container">
-            <Image
-              src="/images/home/connect/image1.png"
-              width={380}
-              height={395}
-              alt="alt"
-              className="image-container max-h-[250px] md:h-[300px] lg:max-h-[400px] z-30 object-cover -ml-[50px]"
-              style={{
-                transform: "scale(1.3)"
-              }}
-            />
-          </div>
-          <div className="relative reveal-container">
-            <Image
-              src="/images/home/connect/image2.png"
-              width={380}
-              height={395}
-              alt="alt"
-              className="image-container max-h-[250px] md:h-[300px] lg:max-h-[400px] z-30 object-cover -ml-[50px]"
-              style={{
-                transform: "scale(1.3)"
-              }}
-            />
-          </div>
-          <div className="relative reveal-container">
-            <Image
-              src="/images/home/connect/image3.png"
-              width={380}
-              height={395}
-              alt="alt"
-              className="image-container max-h-[250px] md:h-[300px] lg:max-h-[400px] z-30 object-cover -ml-[50px]"
-              style={{
-                transform: "scale(1.3)"
-              }}
-            />
-          </div>
-
-          <div className="relative reveal-container">
-            <Image
-              src="/images/home/connect/image4.png"
-              width={380}
-              height={395}
-              alt="alt"
-              className="image-container max-h-[250px] md:h-[300px] lg:max-h-[400px] z-30 object-cover -ml-[50px]"
-              style={{
-                transform: "scale(1.3)"
-              }}
-            />
-          </div>
+        <div className="absolute top-[270px] z-40 flex w-full justify-center">
+          <Link href="https://www.instagram.com/vulounge?igsh=MXNveGEzZnhsNzJhYg==" className=" w-fit flex flex-row items-center justify-center gap-2 px-8 py-4 font-[600] font-playfair uppercase rounded-full bg-primary-foreground text-[#ECE6D6] text-xl">
+            <Icons.instagram className="text-primary" />
+            <span>@jardintequilabarldn</span>
+          </Link>
         </div>
       </div>
     </section >

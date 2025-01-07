@@ -9,23 +9,10 @@ import Special from "./(section)/(special)/Special";
 import Menu from "./(section)/Menu";
 import Reserve from "./(section)/Reserve";
 import About from "./(section)/About";
-import { useEffect } from "react";
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Authentic from "./(section)/Authentic";
+import Map from "./(section)/Map";
 
 export default function HomePage() {
-
-  useEffect(() => {
-    // gsap.registerPlugin(ScrollTrigger)
-    // ScrollTrigger.create({
-    //   trigger: '#hero',
-    //   start: "top top",
-    //   pin: true,
-    //   pinSpacing: false,
-    // })
-
-
-  }, [])
 
   return (
     <main className="relative flex h-full w-full">
@@ -37,8 +24,10 @@ export default function HomePage() {
         <Reserve />
         <Special />
         <Menu />
+        <Authentic />
         <Reviews />
         <ConnectWithUs />
+        <Map />
         <Footer />
       </div>
     </main >

@@ -162,7 +162,7 @@ const Reserve = ({ }) => {
                     <div className="w-full md:w-1/2 flex flex-col justify-center items-center">
                         <div className="w-full max-w-[500px] space-y-8">
                             <p className="font-cormorant text-[#FFF5DD] font-[400] text-lg">Our culinary team draws inspiration from the diverse landscapes of Mexico, blending the bold, earthy flavors of the northern deserts with the fresh, vibrant tastes of the southern jungles. Every dish is crafted with the utmost care and creativity, using the highest quality ingredients to ensure the freshest flavors.Our tortillas are made in-house. Our traditional sauces, arbol, habanero ashes, and verde taquera, are all made from scratch. Complementing our cuisine is an extensive selection of the finest tequilas, carefully chosen to enhance your dining experience</p>
-                            <Button className="font-cormorant font-[600] px-5 py-7 rounded-none bg-primary-foreground text-white text-lg uppercase">book table</Button>
+                            <Button className="font-cormorant font-[600] px-5 py-7 bg-primary-foreground text-white text-lg uppercase rounded-none">book table</Button>
                         </div>
                     </div>
                 </div>
