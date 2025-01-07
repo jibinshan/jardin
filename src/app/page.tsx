@@ -11,6 +11,7 @@ import Reserve from "./(section)/Reserve";
 import About from "./(section)/About";
 import Authentic from "./(section)/Authentic";
 import Map from "./(section)/Map";
+import ViewMenu from "@/components/floating-buttons/ViewMenu";
 
 export default function HomePage() {
 
@@ -29,6 +30,9 @@ export default function HomePage() {
         <ConnectWithUs />
         <Map />
         <Footer />
+      </div>
+      <div className="fixed bottom-8 right-8 z-50 hidden md:flex">
+        <ViewMenu />
       </div>
     </main >
   );
