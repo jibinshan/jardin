@@ -120,7 +120,19 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   return (
     <>
       <div className="z-50 flex w-full flex-col items-center gap-2">
-        <div className="embla-menu w-full">
+        <div className="relative embla-menu w-full">
+          <div className="absolute hidden w-24 h-24 top-2/4 right-1/4 z-30 md:flex justify-center">
+            <NextButton
+              onClick={onNextButtonClick}
+              disabled={nextBtnDisabled}
+            />
+          </div>
+          <div className="absolute hidden w-24 h-24 top-2/4 left-1/4 z-30 md:flex justify-center -ml-5">
+            <PrevButton
+              onClick={onPrevButtonClick}
+              disabled={prevBtnDisabled}
+            />
+          </div>
           <div className="embla-menu__viewport" ref={emblaRef}>
             <div className="embla-menu__container">
               {slides.map((modelData, index) => (
@@ -163,8 +175,8 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
             </div>
           </div>
         </div>
-        <div className="relative flex h-auto w-full items-center justify-end gap-2 px-10 md:px-64">
-          <div className="absolute left-1/2 flex -translate-x-1/2 transform items-center gap-6">
+        <div className="relative flex h-auto w-full items-center justify-end gap-2 px-10 md:px-64 py-4">
+          <div className="absolute md:hidden left-1/2 flex -translate-x-1/2 transform items-center gap-6">
             <PrevButton
               onClick={onPrevButtonClick}
               disabled={prevBtnDisabled}
@@ -175,22 +187,22 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
             />
           </div>
           {/* <p className="flex items-center font-playfair text-3xl">
-            <span className="text-primary">{selectedIndex + 1}</span>/{" "}
-            {scrollSnaps.length}
-          </p> */}
+          <span className="text-primary">{selectedIndex + 1}</span>/{" "}
+          {scrollSnaps.length}
+        </p> */}
         </div>
       </div >
       <div className="absolute left-0 top-0 z-10 flex h-full w-full justify-center">
         {/* <div
-          className="h-full w-[90%] sm:w-[70%] lg:w-[60%] xl:w-[40%]"
-          style={{
-            background: "transparent",
-            borderRadius: "187.5rem 187.5rem 0rem 0rem",
-            border: "1px solid #DF9F4B",
-            flexShrink: "0",
-            borderColor: " -moz-linear-gradient(top, , transparent);",
-          }}
-        /> */}
+        className="h-full w-[90%] sm:w-[70%] lg:w-[60%] xl:w-[40%]"
+        style={{
+          background: "transparent",
+          borderRadius: "187.5rem 187.5rem 0rem 0rem",
+          border: "1px solid #DF9F4B",
+          flexShrink: "0",
+          borderColor: " -moz-linear-gradient(top, , transparent);",
+        }}
+      /> */}
         <div
           className="h-full w-[90%] sm:w-[70%] lg:w-[50%] xl:w-[30%]"
           style={{
@@ -200,18 +212,18 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         />
         <div className="absolute left-1/2 top-0 translate-x-16 transform sm:translate-x-24 md:translate-x-28">
           {/* <div className="relative flex size-24 items-center justify-center">
-            <Icons.badge className="absolute z-10 h-full w-full text-primary" />
-            <p className="font-playfair relative z-20 flex items-center gap-2 text-3xl text-[#282828]">
-              $
-              <span className="flex h-fit w-fit items-center">
-                {slides[selectedIndex]?.price}
-              </span>
-            </p>
-          </div> */}
+          <Icons.badge className="absolute z-10 h-full w-full text-primary" />
+          <p className="font-playfair relative z-20 flex items-center gap-2 text-3xl text-[#282828]">
+            $
+            <span className="flex h-fit w-fit items-center">
+              {slides[selectedIndex]?.price}
+            </span>
+          </p>
+        </div> */}
         </div>
         {/* <h1 className="absolute inset-0 left-1/2 top-2/3 lg:top-1/2 flex -translate-x-1/2 -translate-y-[50%] transform items-center justify-center font-playfair text-7xl lg:text-[7rem] text-[#131313] md:text-[10rem]">
-          Special
-        </h1> */}
+        Special
+      </h1> */}
       </div>
     </>
   );
@@ -225,3 +237,5 @@ const formatModelName = (name: string) => {
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ");
 };
+
+

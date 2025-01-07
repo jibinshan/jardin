@@ -137,8 +137,8 @@ const Special = ({ }) => {
             )
           }
         </div>
-        <div className="w-full pt-12 flex justify-center items-center">
-          <Button className="font-cormorant font-[600] px-5 py-7 rounded-none bg-primary-foreground text-white text-lg uppercase">View Menu</Button>
+        <div className="w-full flex justify-center items-center">
+          <Button className="font-cormorant font-[600] px-7 py-8 tracking-[3px] rounded-none bg-primary-foreground text-white text-lg uppercase">View Menu</Button>
         </div>
       </div>
     </section >

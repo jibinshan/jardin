@@ -153,8 +153,8 @@ const WelcomeRes = ({ }) => {
                         />
                     </div>
                     <div className="w-full md:w-3/4 flex flex-col gap-3 justify-start items-start">
-                        <p className="text-primary-foreground font-[500] font-cormorant text-3xl md:text-5xl">About Jardín</p>
-                        <p className="w-full text-3xl md:text-5xl text-primary-foreground font-cormorant font-[400] leading-[30px]">
+                        <p className="text-primary-foreground font-[400] font-cormorant text-3xl md:text-5xl">About Jardín</p>
+                        <p className="w-full text-3xl md:text-4xl text-primary-foreground font-cormorant font-[400] leading-[30px] uppercase">
                             Welcome to Jardín, an upscale Mexican dining destination where the vibrant flavors of the jungles in Southern Mexico collide with the soul of the northern deserts
                         </p>
                     </div>
