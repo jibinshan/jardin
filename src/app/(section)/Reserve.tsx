@@ -43,7 +43,7 @@ const Reserve = ({ }) => {
                     backgroundPosition: "center right, center left"
                 }}
             >
-                <div className="w-full max-w-[1300px] h-full bg-fixed"
+                <div className="w-full md:px-[140px] h-full bg-fixed"
                     style={{
                         backgroundImage: "url('/images/home/celebrate/bottom.png')",
                         backgroundSize: "20%",
@@ -53,7 +53,7 @@ const Reserve = ({ }) => {
                 />
             </div>
             <div className="relative flex flex-col gap-9 md:gap-14 h-fit bg-transparent w-full items-center justify-center px-3 lg:p-0 py-12 lg:py-24 overflow-hidden z-40">
-                <p className="w-full text-center font-cormorant font-[400] text-[#FFF5DD] text-2xl md:text-6xl uppercase reserve-head"
+                <p className="w-full text-center font-cormorant font-[400] text-[#FFF5DD] text-2xl md:text-7xl uppercase reserve-head"
                     style={{
                         transform: "scale(0.6)"
                     }}
@@ -84,9 +84,9 @@ const Reserve = ({ }) => {
                         />
                     </div>
                     <div className="w-full md:w-1/2 flex flex-col justify-center items-center">
-                        <div className="w-full max-w-[500px] space-y-8">
+                        <div className="w-full max-w-[700px] space-y-8">
                             <p className="font-cormorant text-[#FFF5DD] font-[400] text-lg">Our culinary team draws inspiration from the diverse landscapes of Mexico, blending the bold, earthy flavors of the northern deserts with the fresh, vibrant tastes of the southern jungles. Every dish is crafted with the utmost care and creativity, using the highest quality ingredients to ensure the freshest flavors.Our tortillas are made in-house. Our traditional sauces, arbol, habanero ashes, and verde taquera, are all made from scratch. Complementing our cuisine is an extensive selection of the finest tequilas, carefully chosen to enhance your dining experience</p>
-                            <Button className="font-cormorant font-[600] px-5 py-7 bg-primary-foreground text-white text-lg uppercase rounded-none">book table</Button>
+                            <Button className="font-cormorant font-[600] px-7 py-8 tracking-[3px] bg-primary-foreground text-white text-lg uppercase rounded-none">book table</Button>
                         </div>
                     </div>
                 </div>
