@@ -12,10 +12,10 @@ const Menu = ({ }) => {
 
     return (
         <section id="menu" className="flex flex-col w-full items-center min-h-screen justify-center">
-            <div className={cn("w-full flex flex-col sticky top-0 bg-[#034426]",
+            <div className={cn("w-full flex flex-col sticky top-0 bg-[#034426] px-4 md:px-0",
                 select !== 0 && 'static bg-[#034426] z-40'
             )} >
-                <div className="w-full pt-24 pb-12 flex justify-center items-center bg-[#034426]">
+                <div className="w-full pt-12 pb-12 flex justify-center items-center bg-[#034426]">
                     <div className="w-full max-w-[1300px] flex justify-between items-center">
                         <p className="text-[#ECE6D6] text-lg py-4 px-6 rounded-full border-[1px] border-[#2c6146] uppercase font-cormorant font-[400] md:text-2xl">
                             Make Your Menu Selection
@@ -122,7 +122,7 @@ const Menu = ({ }) => {
 
                 </div>
             </div>
-            <div className={cn("menu-section w-full py-12 h-[50vh] flex flex-col gap-5  justify-start items-center bg-[#035731] sticky top-[300px] z-20 transition-all duration-500 ease-in",
+            <div className={cn("menu-section w-full py-12 px-4 md:px-0 h-[50vh] flex flex-col gap-5  justify-start items-center bg-[#035731] sticky top-[280px] z-20 transition-all duration-500 ease-in",
                 select === 2 && "h-fit md:h-fit",
                 select !== 0 && 'static'
             )} >
@@ -221,8 +221,9 @@ const Menu = ({ }) => {
                 )}
             </div>
             <div className=
-                {cn("menu-section w-full py-12 h-[50vh] flex flex-col gap-5 justify-start items-center bg-[#2d7323] sticky top-[300px] z-30 transition-all duration-500 ease-in",
+                {cn("menu-section w-full py-12 px-4 md:px-0 h-[50vh] flex flex-col gap-5 justify-start items-center bg-[#2d7323] sticky top-[450px] z-30 transition-all duration-500 ease-in",
                     select === 3 && "h-fit md:h-fit",
+                    select !== 0 && select !== 3 && "static"
                 )}
             >
                 <div className="w-full max-w-[1300px] flex justify-between items-start">
@@ -319,7 +320,14 @@ const Menu = ({ }) => {
                     </div>
                 )}
             </div>
-        </section >
+            <div className=
+                {cn("menu-section w-full py-12 h-[50vh] flex flex-col gap-5 justify-start items-center bg-background outline sticky top-0 z-40 transition-all duration-500 ease-in",
+                    select === 3 && "h-fit md:h-fit",
+                    select !== 0 && select !== 3 && "static"
+                )}
+            >
+            </div>
+        </section>
     );
 };
 

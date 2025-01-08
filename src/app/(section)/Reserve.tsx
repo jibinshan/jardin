@@ -37,8 +37,8 @@ const Reserve = ({ }) => {
         >
             <div className="absolute w-full h-full left-0 top-0 flex justify-center items-center bg-fixed"
                 style={{
-                    backgroundImage: "url('/images/home/celebrate/star.svg'), url('/images/home/celebrate/topleft.png')",
-                    backgroundSize: "15% , 8%",
+                    backgroundImage: "url('/images/home/celebrate/star.svg'), url('/images/home/celebrate/topleft.svg')",
+                    backgroundSize: "15% , 10%",
                     backgroundRepeat: "no-repeat,no-repeat",
                     backgroundPosition: "center right, center left"
                 }}
@@ -46,7 +46,7 @@ const Reserve = ({ }) => {
                 <div className="w-full md:px-[140px] h-full bg-fixed"
                     style={{
                         backgroundImage: "url('/images/home/celebrate/bottom.png')",
-                        backgroundSize: "20%",
+                        backgroundSize: "15%",
                         backgroundRepeat: "no-repeat",
                         backgroundPosition: "bottom right"
                     }}
@@ -66,6 +66,7 @@ const Reserve = ({ }) => {
                                 width={180}
                                 height={392}
                                 alt="1"
+                                className="hidden md:flex"
                             />
                             <Image
                                 src='/images/home/celebrate/2.png'

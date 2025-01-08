@@ -119,7 +119,7 @@ const WelcomeRes = ({ }) => {
                     />
                 </div>
                 <div className="z-30 flex flex-col gap-5 lg:gap-24 h-full w-full md:px-[120px] items-center justify-center">
-                    <div className="px-5 py-6 rounded-full flex gap-4 items-center justify-center">
+                    <div className="md:px-5 py-6 rounded-full flex flex-col md:flex-row gap-4 items-center justify-center">
                         <Image
                             src="/images/home/about/delivery.png"
                             width={60}
@@ -127,7 +127,7 @@ const WelcomeRes = ({ }) => {
                             alt="welcome"
                             className=""
                         />
-                        <div className="font-cormorant font-[400] text-base md:text-3xl text-black uppercase">Now delivering with{' '}<Link href='/' className="font-cormorant text-primary-foreground border-b-[1px] border-b-primary-foreground">UberEats!</Link></div>
+                        <div className="font-cormorant font-[400] text-lg md:text-3xl text-black uppercase">Now delivering with{' '}<Link href='/' className="font-cormorant text-primary-foreground border-b-[1px] border-b-primary-foreground">UberEats!</Link></div>
                     </div>
 
                     <div className="relative w-full flex justify-center items-center">
@@ -142,7 +142,7 @@ const WelcomeRes = ({ }) => {
                                 alt="welcome"
                                 className="w-16 md:max-w-full"
                             />
-                            <p className="text-lg md:text-3xl font-cormorant text-center text-[#ECE6D6] -ml-3 md:ml-0 md:max-w-[600px] font-[400]">Welcome to Jardín, an upscale Mexican dining destination where the vibrant flavors of the jungles in Southern Mexico collide with the soul of the northern deserts</p>
+                            <p className="text-base md:text-3xl font-cormorant text-center text-[#ECE6D6] md:ml-0 max-w-[95%] md:max-w-[600px] font-[400]">Welcome to Jardín, an upscale Mexican dining destination where the vibrant flavors of the jungles in Southern Mexico collide with the soul of the northern deserts</p>
                         </div>
                         <Image
                             src="/images/home/about/about.png"
@@ -152,15 +152,15 @@ const WelcomeRes = ({ }) => {
                             className="w-full md:w-3/4"
                         />
                     </div>
-                    <div className="w-full flex flex-col items-center justify-center gap-5 md:gap-12">
-                        <div className="w-full md:w-3/4 flex flex-col gap-3 justify-start items-start">
-                            <p className="text-primary-foreground font-[400] font-cormorant text-3xl md:text-5xl">About Jardín</p>
-                            <p className="w-full text-3xl md:text-4xl text-primary-foreground font-cormorant font-[400] leading-[30px] uppercase">
+                    <div className="w-full flex flex-col items-center justify-center gap-5 md:gap-20">
+                        <div className="w-full md:w-3/4 flex flex-col gap-3 md:gap-5 justify-start items-start">
+                            <p className="text-primary-foreground font-[500] font-cormorant text-3xl">About Jardín</p>
+                            <p className="w-full md:max-w-[85%] text-3xl text-primary-foreground font-cormorant font-[400] leading-[35px] uppercase">
                                 Welcome to Jardín, an upscale Mexican dining destination where the vibrant flavors of the jungles in Southern Mexico collide with the soul of the northern deserts
                             </p>
                         </div>
                         <div className="w-full md:w-3/4 flex md:justify-end">
-                            <p className="w-full md:w-2/3 text-xl md:text-2xl text-primary-foreground font-cormorant font-[400]">
+                            <p className="w-full md:max-w-[60%] text-xl text-primary-foreground font-cormorant font-[400]">
                                 Our culinary team draws inspiration from the diverse landscapes of Mexico, blending the bold, earthy flavors of the northern deserts with the fresh, vibrant tastes of the southern jungles. Every dish is crafted with the utmost care and creativity, using the highest quality ingredients to ensure the freshest flavors.
                             </p>
                         </div>

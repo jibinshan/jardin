@@ -87,7 +87,6 @@ const Reviews = ({ }) => {
         })
 
     }, [])
-    const text = 'Hear Our Guests'
     return (
         <section className="relative flex h-full w-full justify-center items-center bg-background py-12 pb-32 md:py-34 overflow-hidden">
             <div className="absolute w-full h-full left-0 top-0 z-10"
@@ -98,20 +97,16 @@ const Reviews = ({ }) => {
                     backgroundPosition: "top left"
                 }}
             />
-            <div className="flex h-full w-full flex-col items-start justify-center gap-4 z-20">
+            <div className="flex h-full w-full flex-col items-start justify-center gap-4 md:gap-14 z-20">
                 <div className="flex h-full w-full flex-col items-center justify-center gap-4 lg:gap-8">
                     <p className="font-playfair font-[500] capitalize text-primary-foreground text-2xl text-center py-3 px-7 rounded-full border-[1px] border-primary-foreground">
                         Reviews
                     </p>
                     <p className="font-cormorant non-italic uppercase text-primary-foreground font-[600] text-2xl md:text-5xl text-center flex gap-3 justify-center items-center">
-                        {text.split("").map((char, index) => (
-                            <span key={index} className="key head-review" >
-                                {char === " " ? "\u00A0" : char}
-                            </span>
-                        ))}
+                        Hear Our Guests
                     </p>
                 </div>
-                <div className="review-items flex w-full items-center justify-center p-4"
+                <div className="review-items flex w-full items-center justify-center px-4 py-4 md:p-0"
                     style={{
                         transform: "scale(1.3)"
                     }}

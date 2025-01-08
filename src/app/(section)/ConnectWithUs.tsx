@@ -98,8 +98,8 @@ const ConnectWithUs = ({ }) => {
           />
         </div>
         <div className="absolute top-0 left-0 w-full h-full z-40 flex justify-center items-center">
-          <Link href="https://www.instagram.com/vulounge?igsh=MXNveGEzZnhsNzJhYg==" className=" w-fit flex flex-row items-center justify-center gap-2 px-8 py-4 font-[600] font-playfair uppercase rounded-full bg-primary-foreground text-[#ECE6D6] text-xl">
-            <Icons.instagram className="text-primary" />
+          <Link href="https://www.instagram.com/vulounge?igsh=MXNveGEzZnhsNzJhYg==" className=" w-fit px-4 py-4 text-sm md:px-8 md:py-6 font-[600] font-playfair capitalize md:tracking-[0.553px] rounded-full bg-primary-foreground text-[#ECE6D6] md:text-xl flex justify-center items-center gap-1 md:gap-2">
+            <Icons.instagram className="text-primary h-5 w-5 md:h-full md:w-full" />
             <span>@jardintequilabarldn</span>
           </Link>
         </div>

@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 
 const Authentic = ({ }) => {
     return (
-        <section className="w-full flex justify-center items-center py-12 md:py-32 px-4 overflow-hidden bg-background z-30">
+        <section className="w-full flex justify-center items-center py-12 md:pb-32 md:pt-0 -mt-[45vh] md:-mt-[33vh] z-50 px-4 overflow-hidden bg-background">
             <div className="relative w-full md:px-[100px] flex flex-col justify-center items-center gap-10">
                 <div className="absolute hidden md:flex w-full h-full left-0 top-0 z-10 px-[100px]">
                     <div className="w-full h-full"

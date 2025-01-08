@@ -93,13 +93,13 @@ const Footer = ({ }) => {
                 <div className="flex flex-col gap-3 items-center justify-center">
                     <p className="text-[#D3AF5E] font-cormorant font-[600] uppercase text-xl md:text-2xl text-center">Address</p>
                     <div className="flex flex-col gap-1">
-                        <Link href="https://maps.app.goo.gl/3c776tRDmvogSitG8" target="_blank" className="text-[#ECE6D6] text-center font-cormorant text-xl font-[600]">
+                        <Link href="https://maps.app.goo.gl/3c776tRDmvogSitG8" target="_blank" className="text-[#ECE6D6] text-center font-cormorant text-xl md:text-2xl font-[600]">
                             72-74 Parade Watford<br /> Hertfordshire WD17 1AW
                         </Link>
-                        <Link href="tel:+08 097845666" className="text-[#ECE6D6] text-center font-cormorant text-xl font-[600]">
+                        <Link href="tel:+08 097845666" className="text-[#ECE6D6] text-center font-cormorant text-xl md:text-2xl font-[600]">
                             +08 097845666
                         </Link>
-                        <Link href="mailto:jardin@gmail.com" className="text-[#ECE6D6] text-center font-cormorant text-xl font-[600]">
+                        <Link href="mailto:jardin@gmail.com" className="text-[#ECE6D6] text-center font-cormorant text-xl md:text-2xl font-[600]">
                             jardin@gmail.com
                         </Link>
                     </div>

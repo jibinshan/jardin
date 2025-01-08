@@ -86,14 +86,14 @@ const About = ({ }) => {
             <div className="absolute w-full h-full left-0 top-0 py-12 md:py-24">
                 <div className="h-full w-full"
                     style={{
-                        backgroundImage: "url('/images/home/about/topleaf.png') ,url('/images/home/about/bottomleaf.png')",
+                        backgroundImage: "url('/images/home/about/topleaf.svg') ,url('/images/home/about/bottomleaf.svg')",
                         backgroundPosition: "top left , bottom right",
-                        backgroundSize: "8% ,8%",
+                        backgroundSize: "10% ,15%",
                         backgroundRepeat: "no-repeat, no-repeat"
                     }}
                 />
             </div>
-            <div className="absolute w-full h-full left-0 top-0 flex justify-center items-center py-24 z-40">
+            <div className="absolute w-full h-full left-0 top-0 hidden md:flex justify-center items-center py-24 z-40">
                 <div className="w-full h-full md:px-[190px] flex justify-between items-start px-4">
                     <p className="w-full max-w-[850px] text-xl md:text-7xl text-[#ECE6D6] font-cormorant uppercase font-[400]">Step into an
                         oasis of minimal
@@ -107,7 +107,7 @@ const About = ({ }) => {
                     />
                 </div>
             </div>
-            <div className="w-full md:px-[120px] h-[45vh] md:h-[80vh] flex justify-center items-end md:items-center">
+            <div className="w-full md:px-[120px] h-fit md:h-[80vh] flex justify-center items-end md:items-center">
                 <div className="relative w-full md:w-1/2 h-fit flex justify-center items-center aspect-square">
                     <div className="hidden md:flex absolute w-full h-full -left-1/4 top-1/4">
                         <Image
