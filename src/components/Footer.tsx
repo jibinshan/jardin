@@ -72,7 +72,7 @@ const Footer = ({ }) => {
                             </Button>
                         </div>
                         <div className="w-full h-full flex flex-col justify-center md:justify-start items-center md:items-start gap-2 md:gap-5">
-                            <p className="text-[#D3AF5E] font-cormorant font-[600] text-xl md:text-2xl uppercase tracking-[3px]">Hours of Operation</p>
+                            <p className="text-[#D3AF5E] font-cormorant font-[600] text-xl md:text-xl uppercase tracking-[3px]">Hours of Operation</p>
                             <div className="flex flex-col gap-1">
                                 <p className="text-[#ECE6D6] text-xl md:text-xl uppercase font-cormorant font-[600] text-center md:text-start tracking-[3px]">Mon: 12pm-10pm <br />(Cold Menu Only), </p>
                                 <p className="text-[#ECE6D6] text-xl md:text-xl uppercase font-cormorant font-[600] text-center md:text-start tracking-[3px]">Tue-Thur: 12pm-10pm, </p>
@@ -91,7 +91,7 @@ const Footer = ({ }) => {
                     alt="logo"
                 />
                 <div className="flex flex-col gap-3 items-center justify-center">
-                    <p className="text-[#D3AF5E] font-cormorant font-[600] uppercase text-xl md:text-2xl text-center tracking-[3px]">Address</p>
+                    <p className="text-[#D3AF5E] font-cormorant font-[600] uppercase text-xl md:text-xl text-center tracking-[3px]">Address</p>
                     <div className="flex flex-col gap-1">
                         <Link href="https://maps.app.goo.gl/3c776tRDmvogSitG8" target="_blank" className="text-[#ECE6D6] tracking-[3px] text-center font-cormorant text-xl md:text-xl font-[600]">
                             72-74 Parade Watford<br /> Hertfordshire WD17 1AW
