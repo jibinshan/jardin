@@ -31,7 +31,7 @@ const Menu = ({ }) => {
                             <p className="font-cormorant font-[400] uppercase text-2xl">01</p>
                             <p className="font-cormorant text-3xl md:text-7xl uppercase">Lunch</p>
                         </div>
-                        <div className="p-3 rounded-full shadow-lg bg-[#0e603a]" onClick={() => setSelect((prev) => prev === 1 ? 0 : 1)}>
+                        <div className="p-3 rounded-full bg-[#0e603a]" onClick={() => setSelect((prev) => prev === 1 ? 0 : 1)}>
                             <ChevronUp className={cn("text-white transition-all duration-500 ease-in",
                                 select === 1 && "rotate-180",
                             )} />
@@ -131,7 +131,7 @@ const Menu = ({ }) => {
                         <p className="font-cormorant font-[400] uppercase text-2xl">02</p>
                         <p className="font-cormorant text-3xl md:text-7xl uppercase">Dinner</p>
                     </div>
-                    <div className="p-3 rounded-full shadow-lg bg-[#0e603a]" onClick={() => setSelect((prev) => prev === 2 ? 0 : 2)}>
+                    <div className="p-3 rounded-full bg-[#0e603a]" onClick={() => setSelect((prev) => prev === 2 ? 0 : 2)}>
                         <ChevronUp className={cn("text-white transition-all duration-500 ease-in",
                             select === 2 && "rotate-180",
                         )} />
@@ -231,7 +231,7 @@ const Menu = ({ }) => {
                         <p className="font-cormorant font-[400] uppercase text-2xl">03</p>
                         <p className="font-cormorant text-3xl md:text-7xl uppercase">Drinks</p>
                     </div>
-                    <div className="p-3 rounded-full shadow-lg bg-[#367d2b]" onClick={() => setSelect((prev) => prev === 3 ? 0 : 3)}>
+                    <div className="p-3 rounded-full bg-[#367d2b]" onClick={() => setSelect((prev) => prev === 3 ? 0 : 3)}>
                         <ChevronUp className={cn("text-white transition-all duration-500 ease-in",
                             select === 3 && "rotate-180",
                         )} />
