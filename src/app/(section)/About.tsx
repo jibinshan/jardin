@@ -136,7 +136,7 @@ const About = ({ }) => {
                             className="w-1/3 about-three"
                         />
                     </div>
-                    <div className="hidden absolute w-full h-full -right-16 -bottom-16 md:flex items-end justify-end">
+                    <div className="hidden absolute w-full h-full -right-16 -bottom-16 md:flex items-end justify-end ">
                         <Image
                             src='/images/home/about/food1.png'
                             width={394}
