@@ -22,8 +22,8 @@ const Upscale: React.FC = () => {
           className="w-48 md:max-w-full"
         />
       </div>
-      <div className="absolute top-4 z-20 md:top-24">
-        <h1 className="w-full max-w-[1000px] text-center font-cormorant text-4xl font-[400] uppercase leading-[100%] text-[#CDAA56] md:text-8xl">
+      <div className="absolute top-4 z-20 xl:top-24">
+        <h1 className="w-full text-center font-cormorant text-4xl font-[400] uppercase leading-[100%] text-[#CDAA56] md:max-w-[600px] md:text-5xl xl:max-w-[1000px] xl:text-8xl">
           {" "}
           <span className="text-[#036538]">U</span>pscale Mexica
           <span className="text-[#036538]">N</span>{" "}
@@ -31,7 +31,7 @@ const Upscale: React.FC = () => {
           <span className="text-[#036538]">D</span>{" "}
         </h1>
       </div>
-      <div className="absolute -top-[340px] left-0 z-10 flex h-full w-full items-center justify-center px-4 md:-top-[450px] md:px-96">
+      <div className="absolute -top-[340px] left-0 z-10 flex h-full w-full items-center justify-center px-4 sm:-top-[380px] md:-top-[390px] md:px-12 xl:-top-[450px] xl:px-96">
         <div className="relative flex items-center justify-center">
           <div className="absolute bottom-6 md:bottom-32">
             <div className="flex flex-col items-center justify-center gap-5">
@@ -61,7 +61,7 @@ const Upscale: React.FC = () => {
         </div>
       </div>
       <div>
-        <div className="mt-[350px] flex flex-col px-4 md:mt-[900px] md:px-96">
+        <div className="mt-[350px] flex flex-col px-4 sm:mt-[600px] md:mt-[550px] md:px-12 xl:mt-[900px] xl:px-96">
           <div className="flex h-full w-full flex-col gap-4 px-4">
             <h5 className="font-cormorant text-xl font-[500] leading-[116%] text-[#CDAA56] md:text-2xl">
               About Jardín
@@ -88,7 +88,7 @@ const Upscale: React.FC = () => {
             width={1919}
             height={279}
             alt="welcome"
-            className="h-[20vh] w-full md:h-full"
+            className="h-[20vh] w-full object-cover md:h-full"
           />
         </div>
       </div>

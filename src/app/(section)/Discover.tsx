@@ -5,7 +5,7 @@ import React from "react";
 const Discover: React.FC = () => {
   return (
     <section className="relative z-10 h-full w-full bg-[#09251E]">
-      <div className="absolute -left-8 top-0 hidden md:block">
+      <div className="absolute -left-8 top-0 hidden lg:block">
         <Image
           src="/images/home/discover/leaf.svg"
           width={137}
@@ -14,12 +14,12 @@ const Discover: React.FC = () => {
           className="h-[160px] w-[160px] object-fill"
         />
       </div>
-      <div className="flex flex-col gap-8 pb-32 pt-8 md:flex-row md:pb-52 md:pt-0">
-        <div className="flex w-full flex-col gap-6 pl-4 pr-4 pt-8 md:w-1/2 md:pl-40 md:pr-0 md:pt-36">
-          <h1 className="mb-8 font-cormorant text-4xl font-[400] uppercase leading-[90%] tracking-[3.5px] text-[#FCCE67] md:mb-12 md:text-[86px]">
+      <div className="flex flex-col gap-8 pb-32 pt-8 md:pt-0 lg:flex-row lg:pb-52">
+        <div className="flex w-full flex-col gap-6 pl-4 pr-4 pt-8 md:pl-32 md:pr-0 md:pt-36 xl:w-1/2 xl:pl-40">
+          <h1 className="mb-8 font-cormorant text-4xl font-[400] uppercase leading-[90%] tracking-[3.5px] text-[#FCCE67] md:mb-12 md:text-6xl lg:text-[86px]">
             DISCOVER <br /> THE ART OF <br /> TASTE
           </h1>
-          <p className="w-full font-cormorant text-base font-[300] uppercase leading-[130%] text-[#FCCE67] md:w-[450px]">
+          <p className="w-full font-cormorant text-base font-[300] uppercase leading-[130%] text-[#FCCE67] lg:w-[450px]">
             Indulge in the essence of Mexican gastronomy, where the vibrant zest
             of southern jungles harmonizes with the bold spirit of northern
             deserts. Jardín is a celebration of flavors brought to life with
@@ -32,8 +32,8 @@ const Discover: React.FC = () => {
           </div>
         </div>
 
-        <div className="relative flex w-full flex-col gap-12 pl-4 pr-4 pt-0 md:w-1/2 md:pr-0 md:pt-[500px]">
-          <div className="absolute -top-14 hidden md:block">
+        <div className="relative flex w-full flex-col gap-12 pl-4 pr-4 pt-0 md:pr-0 md:pt-6 lg:pt-[500px] xl:w-1/2">
+          <div className="absolute -top-14 hidden lg:block">
             <Image
               src="/images/home/discover/first.png"
               width={483}
@@ -42,7 +42,7 @@ const Discover: React.FC = () => {
               className="h-[490px] w-[390px] object-fill"
             />
           </div>
-          <div className="absolute -top-14 right-0 hidden md:block">
+          <div className="absolute -top-14 right-0 hidden lg:block">
             <Image
               src="/images/home/discover/second.png"
               width={483}

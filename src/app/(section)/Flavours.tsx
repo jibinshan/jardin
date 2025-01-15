@@ -23,14 +23,14 @@ const Flavours: React.FC = () => {
           </h5>
         </div>
 
-        <div className="px-4 pt-16 md:px-44 md:pt-28">
-          <h1 className="text-center font-cormorant text-5xl font-[400] uppercase leading-[90%] tracking-[3px] text-[#FCCE67] md:text-start md:text-8xl">
+        <div className="px-4 pt-16 md:px-8 md:pt-28 lg:px-14 xl:px-44">
+          <h1 className="text-center font-cormorant text-5xl font-[400] uppercase leading-[90%] tracking-[3px] text-[#FCCE67] md:text-start md:text-6xl lg:text-8xl">
             welcome <br /> to the world <br /> of flavours
           </h1>
         </div>
-        <div className="pb-4 pl-4 pt-12 md:pb-28 md:pl-[820px] md:pt-[150px]">
+        <div className="pb-4 pl-4 pt-12 md:pb-28 lg:pl-[620px] lg:pt-[150px] xl:pl-[820px]">
           <div className="flex flex-col items-center gap-6 md:items-start">
-            <p className="w-full max-w-[350px] text-center font-cormorant text-sm font-[400] uppercase leading-[130%] text-[#FFF5DD] md:text-start md:text-base">
+            <p className="w-full max-w-[350px] text-center font-cormorant text-sm font-[400] uppercase leading-[130%] text-[#FFF5DD] md:text-base lg:text-start">
               Welcome to Jardín, an upscale Mexican dining destination where the
               vibrant flavors of the jungles in Southern Mexico collide with the
               soul of the northern deserts
