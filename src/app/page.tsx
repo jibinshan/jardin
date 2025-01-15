@@ -24,8 +24,8 @@ export default function HomePage() {
         <Hero />
         <Flavours />
         <Discover />
-        {/* <Upscale /> */}
-        <Welcome />
+        <Upscale />
+        {/* <Welcome /> */}
         <About />
         <Reserve />
         <Special />

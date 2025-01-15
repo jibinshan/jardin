@@ -14,7 +14,7 @@ const Discover: React.FC = () => {
           className="h-[160px] w-[160px] object-fill"
         />
       </div>
-      <div className="flex flex-col gap-8 pb-12 pt-8 md:flex-row md:pb-52 md:pt-0">
+      <div className="flex flex-col gap-8 pb-32 pt-8 md:flex-row md:pb-52 md:pt-0">
         <div className="flex w-full flex-col gap-6 pl-4 pr-4 pt-8 md:w-1/2 md:pl-40 md:pr-0 md:pt-36">
           <h1 className="mb-8 font-cormorant text-4xl font-[400] uppercase leading-[90%] tracking-[3.5px] text-[#FCCE67] md:mb-12 md:text-[86px]">
             DISCOVER <br /> THE ART OF <br /> TASTE
