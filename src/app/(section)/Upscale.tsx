@@ -61,7 +61,7 @@ const Upscale: React.FC = () => {
         </div>
       </div>
       <div>
-        <div className="mt-[350px] flex flex-col px-4 md:mt-[900px] md:px-96">
+        <div className="mt-[450px] flex flex-col px-4 md:mt-[900px] md:px-96">
           <div className="flex h-full w-full flex-col gap-4 px-4">
             <h5 className="font-cormorant text-xl font-[500] leading-[116%] text-[#CDAA56] md:text-2xl">
               About Jardín
