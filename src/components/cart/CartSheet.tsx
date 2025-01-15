@@ -32,7 +32,7 @@ const CartSheet: FC<CartSheetProps> = ({ children }) => {
             <SheetTrigger asChild>{children}</SheetTrigger>
             <SheetContent className="h-screen">
                 <SheetHeader>
-                    <SheetTitle className="flex items-end gap-4 font-playfair text-3xl font-normal leading-[80%]">
+                    <SheetTitle className="flex items-end gap-4 font-playfair text-3xl font-normal leading-[80%] ">
                         Cart
                         <span className="font-manrope text-base leading-[80%]">
                             ({cartItems.length || 0})
