@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Navbar from "@/components/Navbar";
 import Hero from "./(section)/Hero";
 import Welcome from "./(section)/Welcome";
@@ -12,14 +12,19 @@ import About from "./(section)/About";
 import Authentic from "./(section)/Authentic";
 import Map from "./(section)/Map";
 import ViewMenu from "@/components/floating-buttons/ViewMenu";
+import Flavours from "./(section)/Flavours";
+import Discover from "./(section)/Discover";
+import Upscale from "./(section)/Upscale";
 
 export default function HomePage() {
-
   return (
     <main className="relative flex h-full w-full">
       <div className="flex h-full w-full flex-col items-center justify-center">
         <Navbar position="absolute" />
         <Hero />
+        <Flavours />
+        <Discover />
+        {/* <Upscale /> */}
         <Welcome />
         <About />
         <Reserve />
@@ -34,6 +39,6 @@ export default function HomePage() {
       <div className="fixed bottom-8 right-8 z-50 hidden md:flex">
         <ViewMenu />
       </div>
-    </main >
+    </main>
   );
 }
