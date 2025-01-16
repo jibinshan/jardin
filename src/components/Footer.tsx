@@ -93,34 +93,31 @@ const Footer = ({ }) => {
                 <div className="flex flex-col gap-3 items-center justify-center">
                     <p className="text-[#D3AF5E] font-cormorant font-[600] uppercase text-xl md:text-xl text-center tracking-[3px]">Address</p>
                     <div className="flex flex-col gap-1">
-                        <Link href="https://maps.app.goo.gl/3c776tRDmvogSitG8" target="_blank" className="text-[#ECE6D6] tracking-[3px] text-center font-cormorant text-xl md:text-xl font-[600]">
+                        <Link href="https://maps.app.goo.gl/QCV9iWaXNE8BadbS6" target="_blank" className="text-[#ECE6D6] tracking-[3px] text-center font-cormorant text-xl md:text-xl font-[600]">
                             72-74 Parade Watford<br /> Hertfordshire WD17 1AW
                         </Link>
-                        <Link href="tel:+08 097845666" className="text-[#ECE6D6] text-center font-cormorant text-xl md:text-xl font-[600] tracking-[3px]">
-                            +08 097845666
+                        <Link href="tel:+441923934864" className="text-[#ECE6D6] text-center font-cormorant text-xl md:text-xl font-[600] tracking-[3px]">
+                            +44 1923 934864
                         </Link>
-                        <Link href="mailto:jardin@gmail.com" className="text-[#ECE6D6] text-center font-cormorant text-xl md:text-xl font-[600] tracking-[3px]">
-                            jardin@gmail.com
+                        <Link href="mailto:info@jardinhg.com" className="text-[#ECE6D6] text-center font-cormorant text-xl md:text-xl font-[600] tracking-[3px]">
+                            info@jardinhg.com
                         </Link>
                     </div>
                 </div>
 
 
                 <div className="flex items-center justify-start gap-4">
-                    <Link href="https://www.instagram.com/bruncho_uk/?hl=en" className="text-[#D3AF5E]">
+                    <Link href="https://www.instagram.com/jardintequilabarldn/" target="_blank" className="text-[#D3AF5E]">
                         <Icons.instagram />
                     </Link>
-                    <Link href="" className="text-[#D3AF5E]">
-                        <Icons.tripAdvisor />
-                    </Link>
-                    <Link href="https://www.google.com/search?hl=en-IN&gl=in&q=Bruncho,+270+Deansgate,+Manchester+M3+4JB,+United+Kingdom" className="text-white">
+                    <Link href="https://g.co/kgs/YtWgN5j" className="text-white">
                         <Icons.google className="text-[#D3AF5E]" />
                     </Link>
-                    <Link href="" className="text-[#D3AF5E]">
+                    <Link href="https://www.facebook.com/eatjardinlondon/" target="_blank" className="text-[#D3AF5E]">
                         <Icons.facebook />
                     </Link>
                 </div>
-                <p className="text-[#ECE6D6] text-lg font-cormorant font-[600] text-center uppercase italic">Powerd by foodo</p>
+                <p href="https://www.foodo.ai" target="_blank" className="text-[#ECE6D6] text-lg font-cormorant font-[600] text-center uppercase italic">Powerd by foodo</p>
             </div>
         </footer>
     );
