@@ -65,7 +65,7 @@ export default function MenuItem({ item }: { item: MenuItem }) {
                 {cartItems.find((cart) => cart._idMenuItem === item._id)?._idMenuItem === item._id ?
                     item && (
                         <MenuChoosing item={item}>
-                            <Button variant="secondary" className="bg-itembutton px-8 text-lg font-bold text-menuprimary hover:bg-menubackground  rounded-none">
+                            <Button variant="secondary" className="bg-menuprimary px-8 text-lg font-bold text-menusecondary   rounded-none">
                                 Add
                             </Button>
                         </MenuChoosing>
@@ -73,7 +73,7 @@ export default function MenuItem({ item }: { item: MenuItem }) {
                     :
                     (
                         <Link href={`/menu/${item._id}`}>
-                            <Button variant="secondary" className="bg-itembutton px-8 text-lg font-bold text-menuprimary hover:bg-menubackground rounded-none">
+                            <Button variant="secondary" className="bg-menuprimary px-8 text-lg font-bold text-menusecondary rounded-none">
                                 Add
                             </Button>
                         </Link>

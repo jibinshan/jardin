@@ -172,7 +172,7 @@ const MenuItemDrawer: FC<MenuItemPopupProps> = ({ children, item }) => {
               </Button>
               <span className="text-lg font-medium text-menuforeground">{quantity}</span>
               <Button
-                className="h-full w-1/3 rounded-full bg-primary p-0 shadow-none hover:bg-transparent"
+                className="h-full w-1/3 rounded-full bg-transparent p-0 shadow-none hover:bg-transparent"
                 onClick={() => {
                   setQuantity((prev) => prev + 1);
                 }}

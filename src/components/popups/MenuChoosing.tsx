@@ -29,7 +29,7 @@ const MenuChoosing: FC<MenuChoosingProps> = ({ children, item }) => {
                     <p className="text-menusecondary">Repeat previous customisation?</p>
                 </DialogHeader>
                 <div className="px-5">
-                    <div className="rounded-xl bg-menuforeground px-5 py-6">
+                    <div className="rounded-xl bg-itembackground px-5 py-6">
                         <p className="font-manrope flex items-center justify-start gap-1 text-sm text-menusecondary">
                             {item.name}:&nbsp;
                             {modifiers?.map((mod) => {

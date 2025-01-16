@@ -206,7 +206,7 @@ export default function Menu() {
         >
           <div className="absolute left-0 top-0 flex h-full w-full items-end justify-end px-12 py-12">
             <Link href='/pdf/dine-in-menu.pdf' target="_blank">
-              <Button className="flex items-center justify-center gap-2 bg-menuprimary rounded-none px-5 py-6 text-lg font-[600] text-menuforeground hover:bg-buttonhover">
+              <Button className="w-fit flex items-center justify-center gap-2 bg-menuprimary rounded-none px-5 py-6 text-lg font-[600] text-menuforeground hover:bg-buttonhover">
                 <Image src="/images/pdf.svg" width={23} height={29} alt="pdf" />
                 <span className="leading-none">Download Menu</span>
               </Button>
@@ -214,7 +214,7 @@ export default function Menu() {
           </div>
         </div>
         {/* Categories */}
-        <div className="sticky top-0 z-10 flex items-center bg-menuforeground px-4 py-2">
+        <div className="sticky top-0 z-10 flex items-center bg-itembackground px-4 py-2">
           <div
             ref={categoryNavRef}
             className="hidden-scrollbar flex overflow-x-auto py-2"
@@ -230,8 +230,8 @@ export default function Menu() {
                   className={cn(
                     "shrink-0 rounded-none font-extrabold transition-colors",
                     activeCategory === category._id
-                      ? "bg-menuprimary text-menuforeground"
-                      : "bg-menusecondary text-menuforeground hover:bg-buttonhover",
+                      ? "bg-menuprimary text-menusecondary"
+                      : "bg-menusecondary text-itembackground hover:bg-buttonhover",
                     existCategory.find(
                       (categoryid) => categoryid === category._id,
                     ) !== category._id && "hidden w-0 border-0 px-0 py-0",
