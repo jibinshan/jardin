@@ -117,7 +117,7 @@ const Footer = ({ }) => {
                         <Icons.facebook />
                     </Link>
                 </div>
-                <p href="https://www.foodo.ai" target="_blank" className="text-[#ECE6D6] text-lg font-cormorant font-[600] text-center uppercase italic">Powerd by foodo</p>
+                <p href="https://www.foodo.ai" className="text-[#ECE6D6] text-lg font-cormorant font-[600] text-center uppercase italic">Powerd by foodo</p>
             </div>
         </footer>
     );
