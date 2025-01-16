@@ -1,21 +1,35 @@
-import Navbar from "@/components/Navbar";
-import { BetaMenuActive } from "@/lib/constants";
-import { redirect } from "next/navigation";
+'use client'
 import Checkout from "./(section)/Checkout";
+import Image from "next/image";
+import Link from "next/link";
+import { MoveLeft } from "lucide-react";
 
 const page = ({ }) => {
-  // don't remove
-  if (!BetaMenuActive) {
-    redirect("/");
-  }
-  return (
-    <main className="relative flex h-full w-full">
-      <div className="flex h-full w-full flex-col items-center justify-center">
-        <Navbar />
-        <Checkout />
-      </div>
-    </main>
-  )
+    return (
+        <main className="relative flex flex-col h-full w-full bg-black">
+            <div className="w-full bg-black h-[10vh] flex justify-center items-center">
+                <div className="w-[38%] h-full flex justify-start items-center px-3">
+                    <Link href='/cart'>
+                        <MoveLeft />
+                    </Link>
+                </div>
+                <div className="w-[62%] flex items-center justify-start">
+                    <Link href="/">
+                        <Image
+                            src="/images/logo.png"
+                            width={177}
+                            height={101}
+                            alt="logo "
+                            className="w-20 md:w-32 md:mt-1"
+                        />
+                    </Link>
+                </div>
+            </div>
+            <div className="flex h-full w-full flex-col items-center justify-center">
+                <Checkout />
+            </div>
+        </main>
+    );
 };
 
 export default page;

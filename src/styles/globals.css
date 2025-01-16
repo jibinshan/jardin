@@ -89,6 +89,21 @@
   --border: 0 0% 60%;
   --input: 0 0% 80%;
   --ring: 35 84% 60%;
+
+  /* menu Checkout Start */
+
+  --menubackground: 0, 0%, 3%;
+  --menuforeground: 0, 0%, 0%;
+  --menuprimary: 38, 41%, 55%;
+  --menusecondary: 35, 84%, 90%;
+  --buttonhover: 42, 73%, 41%;
+  --itembackground: 0, 0%, 6%;
+  --menuprimaryforeground: 36, 18%, 70%;
+  --menusecondaryforeground: 0, 0%, 20%;
+  --itemdescription: 36, 2%, 47%;
+  --itembutton: 0, 0%, 9%;
+  --buttondisabled: 0, 0%, 17%;
+  --mobilebg: 0, 0%, 0%;
 }
 
 /* Scrolling Text Start */
@@ -518,7 +533,7 @@
   animation: pressDown8 3.2s infinite;
 }
 
-.floating {  
+.floating {
   animation-name: floating;
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -527,7 +542,15 @@
 }
 
 @keyframes floating {
-  from { transform: translate(0,  0px); }
-  65%  { transform: translate(0, 15px); }
-  to   { transform: translate(0, -0px); }    
+  from {
+    transform: translate(0, 0px);
+  }
+
+  65% {
+    transform: translate(0, 15px);
+  }
+
+  to {
+    transform: translate(0, -0px);
+  }
 }

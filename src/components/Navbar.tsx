@@ -87,10 +87,12 @@ const Navbar = ({
             >
               <Link href="/contact" className="flex items-center justify-center gap-2 text-white font-cormorant tracking-[3px] font-[600] hover:text-primary uppercase text-lg z-20">Contact</Link>
             </Button>
-            <Button className="px-7  font-cormorant font-[600] text-lg text-black bg-white h-[10vh] rounded-none uppercase tracking-[3px]"
-            >
-              book table
-            </Button>
+            <Link href='/table-booking'>
+              <Button className="px-7  font-cormorant font-[600] text-lg text-black bg-white h-[10vh] rounded-none uppercase tracking-[3px]"
+              >
+                book table
+              </Button>
+            </Link>
           </div>
         </div>
         <div className="flex md:hidden">
