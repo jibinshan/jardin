@@ -101,7 +101,7 @@ const Contact = ({ }) => {
                     asChild
                     className="px-1 py-1 hover:bg-transparent"
                   >
-                    <Link href="https://www.instagram.com/bruncho_uk/?hl=en">
+                    <Link href="https://www.instagram.com/jardintequilabarldn/" target="_blank">
                       <span className="sr-only">Instagram</span>
                       <Icons.instagram />
                     </Link>
@@ -121,21 +121,21 @@ const Contact = ({ }) => {
                     asChild
                     className="px-1 py-1 hover:bg-transparent"
                   >
-                    <Link href="https://www.google.com/search?hl=en-IN&gl=in&q=Bruncho,+270+Deansgate,+Manchester+M3+4JB,+United+Kingdom">
+                    <Link href="https://g.co/kgs/tGxbGwP" target="_blank">
                       <span className="sr-only">Google</span>
                       <Icons.google />
                     </Link>
                   </Button>
-                  {/* <Button
+                  <Button
                     variant="ghost"
                     asChild
                     className="px-1 py-1 hover:bg-transparent"
                   >
-                    <Link href="">
+                    <Link href="https://www.facebook.com/eatjardinlondon/" target="_blank">
                       <span className="sr-only">Facebook</span>
                       <Icons.facebook />
                     </Link>
-                  </Button> */}
+                  </Button>
                 </div>
               </div>
               <div className="flex flex-col gap-4">
@@ -153,31 +153,31 @@ const Contact = ({ }) => {
                   <div className="flex flex-col gap-2">
                     <p className="flex gap-7 text-[#b3b3aa]">
                       <span>:</span>
-                      <span>8:00 - 18:00</span>
+                      <span>12:00 PM - 12:00 AM</span>
                     </p>
                     <p className="flex gap-7 text-[#b3b3aa]">
                       <span>:</span>
-                      <span>8:00 - 17:00</span>
+                      <span>12:00 PM - 10:00 PM</span>
                     </p>
                     <p className="flex gap-7 text-[#b3b3aa]">
                       <span>:</span>
-                      <span>7:30 - 17:00</span>
+                      <span>CLOSED</span>
                     </p>
                     <p className="flex gap-7 text-[#b3b3aa]">
                       <span>:</span>
-                      <span>7:30 - 17:00</span>
+                      <span>3:00 PM - 10:00 PM</span>
                     </p>
                     <p className="flex gap-7 text-[#b3b3aa]">
                       <span>:</span>
-                      <span>7:30 - 17:00</span>
+                      <span>3:00 PM - 10:00 PM</span>
                     </p>
                     <p className="flex gap-7 text-[#b3b3aa]">
                       <span>:</span>
-                      <span>7:30 - 17:00</span>
+                      <span>3:00 PM - 10:00 PM</span>
                     </p>
                     <p className="flex gap-7 text-[#b3b3aa]">
                       <span>:</span>
-                      <span>7:30 - 19:00</span>
+                      <span>12:00 PM  - 12:00 AM</span>
                     </p>
                   </div>
                 </div>
@@ -193,9 +193,9 @@ const Contact = ({ }) => {
                   </div>
                 </div>
                 <div className="flex flex-col gap-4">
-                  <Link href='https://maps.app.goo.gl/3c776tRDmvogSitG8'>
+                  <Link href='https://maps.app.goo.gl/QCV9iWaXNE8BadbS6'>
                     <p className="font-inter text-black">
-                      Bruncho, 270 Deansgate,<br /> Manchester M3 4JB, United Kingdom
+                      72-74 The Parade, High St<br/> Watford WD17 1AW, United Kingdom
                     </p>
                   </Link>
                   <Link href='https://maps.app.goo.gl/3c776tRDmvogSitG8'>
@@ -213,8 +213,8 @@ const Contact = ({ }) => {
                   </div>
                 </div>
                 <div className="flex flex-col gap-4">
-                  <Link href='tel:+447708433823'>
-                    <p className="text-black">+447708433823</p>
+                  <Link href='tel:+441923934864'>
+                    <p className="text-black">+44 1923 934864</p>
                   </Link>
                 </div>
               </div>
@@ -225,8 +225,8 @@ const Contact = ({ }) => {
                   </div>
                 </div>
                 <div className="flex flex-col gap-4">
-                  <Link href='mailto:info@bruncho.co.uk'>
-                    <p className="text-black">info@bruncho.co.uk</p>
+                  <Link href='mailto:info@jardinhg.com'>
+                    <p className="text-black">info@jardinhg.com</p>
                   </Link>
                 </div>
               </div>
@@ -328,7 +328,7 @@ const Contact = ({ }) => {
         </div>
         <div className="w-full max-w-[1300px] px-4 md:px-0">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2374.440689413923!2d-2.253806473260315!3d53.47845532232793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb106947accd9%3A0x8584fcba9b1ebf9f!2sBruncho!5e0!3m2!1sen!2sin!4v1733683178206!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2475.0897846028593!2d-0.40036209999999994!3d51.658192500000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48766ac1b6bad547%3A0x6aab586ed516f809!2sJard%C3%ADn%20Mexican%20Cocina%20%26%20Tequila%20Bar!5e0!3m2!1sen!2sin!4v1737039569321!5m2!1sen!2sin"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
