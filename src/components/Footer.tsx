@@ -74,10 +74,10 @@ const Footer = ({ }) => {
                         <div className="w-full h-full flex flex-col justify-center md:justify-start items-center md:items-start gap-2 md:gap-5">
                             <p className="text-[#D3AF5E] font-cormorant font-[600] text-xl md:text-xl uppercase tracking-[3px]">Hours of Operation</p>
                             <div className="flex flex-col gap-1">
-                                <p className="text-[#ECE6D6] text-xl md:text-xl uppercase font-cormorant font-[600] text-center md:text-start tracking-[3px]">Mon: 12pm-10pm <br />(Cold Menu Only), </p>
-                                <p className="text-[#ECE6D6] text-xl md:text-xl uppercase font-cormorant font-[600] text-center md:text-start tracking-[3px]">Tue-Thur: 12pm-10pm, </p>
-                                <p className="text-[#ECE6D6] text-xl md:text-xl uppercase font-cormorant font-[600] text-center md:text-start tracking-[3px]">Fri & Sat: 12pm-3am,</p>
-                                <p className="text-[#ECE6D6] text-xl md:text-xl uppercase font-cormorant font-[600] text-center md:text-start tracking-[3px]">Sun: 12pm-9pm </p>
+                                <p className="text-[#ECE6D6] text-xl md:text-xl uppercase font-cormorant font-[600] text-center md:text-start tracking-[3px]">Mon: Closed</p>
+                                <p className="text-[#ECE6D6] text-xl md:text-xl uppercase font-cormorant font-[600] text-center md:text-start tracking-[3px]">Tue-Thur: 03:00pm - 10:00pm, </p>
+                                <p className="text-[#ECE6D6] text-xl md:text-xl uppercase font-cormorant font-[600] text-center md:text-start tracking-[3px]">Fri & Sat: 12:00pm - 12:00am,</p>
+                                <p className="text-[#ECE6D6] text-xl md:text-xl uppercase font-cormorant font-[600] text-center md:text-start tracking-[3px]">Sun: 12:00pm - 10:00pm </p>
                             </div>
                         </div>
                     </div>
