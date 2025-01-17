@@ -2,7 +2,7 @@ import "@/styles/globals.css";
 import "@/styles/ham.css";
 import { cn } from "@/lib/utils";
 import { type Metadata } from "next";
-import { Inter, Playfair_Display, Cormorant } from "next/font/google";
+import { Inter, Playfair_Display, Cormorant, Manrope } from "next/font/google";
 import Providers from "@/app/Providers";
 
 export const metadata: Metadata = {
@@ -15,6 +15,12 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
   weight: ["400"],
+});
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-manrope",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 const cormorant = Cormorant({
@@ -36,14 +42,15 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "theme-custom font-inter flex min-h-screen text-[#FBEAD2] antialiased",
+          "theme-custom flex min-h-screen font-inter text-[#FBEAD2] antialiased",
           cormorant.variable,
           playfair.variable,
           inter.variable,
+          manrope.variable,
         )}
       >
         <Providers>{children}</Providers>
       </body>
-    </html >
+    </html>
   );
 }

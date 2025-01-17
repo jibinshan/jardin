@@ -15,6 +15,7 @@ import ViewMenu from "@/components/floating-buttons/ViewMenu";
 import Flavours from "./(section)/Flavours";
 import Discover from "./(section)/Discover";
 import Upscale from "./(section)/Upscale";
+import CheckOut from "./(section)/CheckOut";
 
 export default function HomePage() {
   return (
@@ -35,6 +36,7 @@ export default function HomePage() {
         <ConnectWithUs />
         <Map />
         <Footer />
+        <CheckOut />
       </div>
       <div className="fixed bottom-8 right-8 z-50 hidden md:flex">
         <ViewMenu />

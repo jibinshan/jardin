@@ -11,6 +11,7 @@ export default {
         cormorant: ["var(--font-cormorant)", ...fontFamily.sans],
         inter: ["var(--font-inter)", ...fontFamily.sans],
         sans: ["Inter", "sans-serif"],
+        manrope: ["var(--font-manrope)", ...fontFamily.sans],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -18,8 +19,8 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       backgroundImage: {
-        'button-bg': "url('/images/buttonbg.png')",
-        'button-hover': "url('/images/buttonhover.png')"
+        "button-bg": "url('/images/buttonbg.png')",
+        "button-hover": "url('/images/buttonhover.png')",
       },
       colors: {
         background: "hsl(var(--background))",
