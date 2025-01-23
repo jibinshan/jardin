@@ -124,13 +124,10 @@ export default function Menu() {
   const [totalAmount, setTotalAmount] = useState(0);
   const { items } = useRestaurant();
   useEffect(() => {
-    console.log(cartItems, "==cart");
-
     const totalCart = cartItems.reduce(
       (acc, i) => acc + i.price.value,
       0,
     );
-    console.log(totalCart, "==totalCart");
 
     setTotalAmount(totalCart);
   }, [cartItems]);
@@ -206,7 +203,7 @@ export default function Menu() {
         >
           <div className="absolute left-0 top-0 flex h-full w-full items-end justify-end px-12 py-12">
             <Link href='/pdf/dine-in-menu.pdf' target="_blank">
-              <Button className="w-fit flex items-center justify-center gap-2 bg-menuprimary rounded-none px-5 py-6 text-lg font-[600] text-menuforeground hover:bg-buttonhover">
+              <Button className="flex items-center justify-center gap-2 bg-menuprimary rounded-none px-5 py-6 text-lg font-[600] text-menuforeground hover:bg-buttonhover">
                 <Image src="/images/pdf.svg" width={23} height={29} alt="pdf" />
                 <span className="leading-none">Download Menu</span>
               </Button>
@@ -214,7 +211,7 @@ export default function Menu() {
           </div>
         </div>
         {/* Categories */}
-        <div className="sticky top-0 z-10 flex items-center bg-itembackground px-4 py-2">
+        <div className="sticky top-0 z-10 flex items-center bg-menubackground px-4 py-2">
           <div
             ref={categoryNavRef}
             className="hidden-scrollbar flex overflow-x-auto py-2"
@@ -230,8 +227,8 @@ export default function Menu() {
                   className={cn(
                     "shrink-0 rounded-none font-extrabold transition-colors",
                     activeCategory === category._id
-                      ? "bg-menuprimary text-menusecondary"
-                      : "bg-menusecondary text-itembackground hover:bg-buttonhover",
+                      ? "bg-menuprimary text-menuforeground hover:bg-buttonhover"
+                      : "bg-transparent text-menuprimary border-[1px] border-menuprimary hover:bg-buttonhover hover:text-menuforeground",
                     existCategory.find(
                       (categoryid) => categoryid === category._id,
                     ) !== category._id && "hidden w-0 border-0 px-0 py-0",
@@ -256,7 +253,7 @@ export default function Menu() {
                 className="scroll-mt-20"
               >
                 <h2 className={cn(
-                  "text-2xl font-bold text-menusecondary",
+                  "text-2xl font-bold text-menuprimary",
                   category._id !==
                   existCategory.find(
                     (categoryid) => categoryid === category._id,
@@ -275,7 +272,7 @@ export default function Menu() {
         <div className="sticky top-0 z-10 h-fit overflow-y-visible bg-itembackground px-4 py-2">
           <div className="scrollbar-none flex flex-col gap-6 overflow-x-auto pb-2">
             <p className="flex items-center justify-center gap-1 pt-6 text-base font-normal tracking-[1.8px] text-menusecondary">
-              <ShoppingBag fill="#fbead2" className="text-itembackground" />{" "}
+              <ShoppingBag fill="#034426" className="text-itembackground" />{" "}
               <span>
                 Collection from{" "}
                 {restaurant?.name}
@@ -306,7 +303,7 @@ export default function Menu() {
               </Button>
             </div> */}
             <Button
-              className="relative flex w-full items-center justify-between rounded-none bg-menuprimary py-6 font-manrope text-lg font-bold uppercase text-menubackground disabled:bg-buttondisabled disabled:text-background"
+              className="relative flex w-full items-center justify-between rounded-none bg-menuprimary py-6 font-manrope text-lg font-bold uppercase hover:bg-menuprimary text-background disabled:bg-buttondisabled disabled:text-background"
               onClick={() => router.push("/checkout")}
               disabled={cartItems.length === 0}
             >
@@ -342,36 +339,50 @@ export default function Menu() {
                               {item?.quantity}&nbsp;&nbsp;{item.name}
                             </p>
                           </div>
-                          <p className="font-[700] text-menuprimary">
-                            {menuitem && getCurrencySymbol(menuitem.price.currency)}{" "}
-                            {menuitem && formattedItemPrice(menuitem.price.value)}
-                          </p>
+                          {menuitem?.price.value ? menuitem?.price.value > 0 && (
+                            <p className="font-[700] text-menuprimary">
+                              {menuitem && getCurrencySymbol(menuitem.price.currency)}{" "}
+                              {menuitem && formattedItemPrice(menuitem.price.value)}
+                            </p>
+                          ) : ''}
                         </div>
+
                         <div className="flex w-full flex-col items-center justify-between gap-2 pl-3">
-                          {item.modifiers.map((modifiers, index) => {
-                            const modifier = items.find(
-                              (item) => item._id === modifiers._idMenuItem,
-                            )?.name;
-                            return (
-                              <div
-                                className="flex w-full items-center justify-between"
-                                key={index}
-                              >
-                                <p className="w-[80%] text-sm font-[300] tracking-[1.4px] text-menusecondary">
-                                  {item?.quantity}&nbsp;&nbsp;{modifier}
-                                </p>
+                          {Object.entries(
+                            item.modifiers.reduce((acc, modifier) => {
+                              const name = items.find(
+                                (i) => i._id === modifier._idMenuItem,
+                              )?.name;
+                              if (name) {
+                                if (!acc[name]) {
+                                  acc[name] = { ...modifier, count: 0 };
+                                }
+                                acc[name].count += 1;
+                              }
+                              return acc;
+                            }, {} as Record<string, typeof item.modifiers[0] & { count: number }>),
+                          ).map(([name, modifier], index) => (
+                            <div
+                              className="flex w-full items-center justify-between"
+                              key={index}
+                            >
+                              <p className="w-[80%] text-sm font-[300] tracking-[1.4px] text-menusecondary">
+                                {modifier.count}&nbsp;&nbsp;{name}
+                              </p>
+                              {modifier.price.value > 0 ? (
                                 <p className="text-sm font-[700] text-menuprimary">
-                                  {getCurrencySymbol(modifiers.price.currency)}{" "}
-                                  {formattedItemPrice(modifiers.price.value)}
+                                  {getCurrencySymbol(modifier.price.currency)}{" "}
+                                  {formattedItemPrice(modifier.price.value)}
                                 </p>
-                              </div>
-                            );
-                          })}
+                              ) : ''}
+                            </div>
+                          ))}
                         </div>
+
                         <div className="flex w-full items-center justify-between pt-6">
                           <Link
                             href={`/cart/${index}`}
-                            className="font-[400] capitalize text-menuprimary"
+                            className="font-[400] capitalize text-menuprimary underline"
                           >
                             Edit Item
                           </Link>
@@ -394,7 +405,7 @@ export default function Menu() {
                                   {
                                     ...item,
                                     price: {
-                                      currency: item.price.currency,
+                                      ...item.price,
                                       value: item.price.value - item.price.value / item.quantity,
                                     },
                                     quantity: item.quantity - 1,
@@ -415,7 +426,7 @@ export default function Menu() {
                                   {
                                     ...item,
                                     price: {
-                                      currency: item.price.currency,
+                                      ...item.price,
                                       value: item.price.value + item.price.value / item.quantity,
                                     },
                                     quantity: item.quantity + 1,
@@ -441,14 +452,14 @@ export default function Menu() {
 
             {/* Footer */}
             <div className="flex items-center justify-between">
-              <p className="font-bold text-menuprimary-foreground">Subtotal</p>
+              <p className="font-bold text-menuprimary">Subtotal</p>
               <p className="text-lg font-bold text-menuprimary">
                 {"£"} {formattedItemPrice(totalAmount)}
               </p>
             </div>
           </div>
         </div>
-      </div>
+      </div >
     </section >
   );
 }

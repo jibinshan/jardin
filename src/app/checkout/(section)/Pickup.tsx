@@ -40,7 +40,7 @@ type FormData = z.infer<typeof FormValidation>;
 const Pickup = () => {
     const { apiUrl, restaurantID, restaurant } = useRestaurant();
     const router = useRouter();
-    const { cartItems, clearCart } = useCart();
+    const { cartItems } = useCart();
     const [pickup, setPickUp] = useState<string>("Standard");
     const [scheduleTime, setScheduleTime] = useState<ScheduleTime>({
         time: "",
@@ -68,6 +68,7 @@ const Pickup = () => {
                 description: "Order for " + data.name,
                 orderStatus: "placed_order",
                 items: cartItems,
+                notes: note,
                 userDetails: {
                     name: data.name,
                     email: data.email,
@@ -97,7 +98,6 @@ const Pickup = () => {
         },
         onSuccess: (data) => {
             toast("Order created successfully");
-            clearCart();
             router.push("/payment/" + data._id);
         },
         onError: () => {
@@ -110,11 +110,11 @@ const Pickup = () => {
     };
     return (
         <div>
-            <div className="flex w-full flex-col items-start justify-between gap-3 border-b-[2px] border-[#131313] py-3 pb-5">
+            <div className="flex w-full flex-col items-start justify-between gap-3 border-b-[2px] border-menuprimary py-3 pb-5">
                 <p className="text-xl font-semibold text-[#7A7875]">Pickup Location</p>
                 <div className="flex w-full items-center justify-between gap-1 px-1 py-1">
                     <div className="flex items-center gap-2">
-                        <div className="rounded-md bg-[#161616] px-4 py-4 text-sm text-[#bc995d]">
+                        <div className="rounded-md bg-menuprimary px-4 py-4 text-sm text-menuforeground">
                             <MapPin />
                         </div>
                         <div>
@@ -137,7 +137,7 @@ const Pickup = () => {
             </div>
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="h-full">
-                    <div className="flex flex-col gap-4 border-b-[2px] border-b-[#131313] pb-7 pt-7">
+                    <div className="flex flex-col gap-4 border-b-[2px] border-b-menuprimary pb-7 pt-7">
                         <div className="w-full lg:w-2/6">
                             <p className="text-lg font-semibold text-[#7A7875]">Contact Details</p>
                         </div>
@@ -151,7 +151,7 @@ const Pickup = () => {
                                             <Input
                                                 placeholder="Name"
                                                 {...field}
-                                                className="h-12 rounded-none border-b-[3px] border-l-0 border-r-0 border-t-0 border-b-[#323232] bg-[#0c0c0c] outline-none focus-visible:border-b-[2px] focus-visible:border-b-[#bc995d] focus-visible:ring-0"
+                                                className="h-12 rounded-none border-b-[3px] border-l-0 border-r-0 border-t-0 border-b-menuprimary-foreground bg-menuforeground outline-none focus-visible:border-b-[2px] focus-visible:border-b-menuprimary focus-visible:ring-0"
                                             />
                                         </FormControl>
                                         <FormMessage />
@@ -167,7 +167,7 @@ const Pickup = () => {
                                             <Input
                                                 placeholder="Phone Number"
                                                 {...field}
-                                                className="h-12 rounded-none border-b-[3px] border-l-0 border-r-0 border-t-0 border-b-[#323232] bg-[#0c0c0c] outline-none focus-visible:border-b-[2px] focus-visible:border-b-[#bc995d] focus-visible:ring-0"
+                                                className="h-12 rounded-none border-b-[3px] border-l-0 border-r-0 border-t-0 border-b-menuprimary-foreground bg-menuforeground outline-none focus-visible:border-b-[2px] focus-visible:border-b-menuprimary focus-visible:ring-0"
                                             />
                                         </FormControl>
                                         <FormMessage />
@@ -183,7 +183,7 @@ const Pickup = () => {
                                             <Input
                                                 placeholder="Email ID"
                                                 {...field}
-                                                className="h-12 rounded-none border-b-[3px] border-l-0 border-r-0 border-t-0 border-b-[#323232] bg-[#0c0c0c] outline-none focus-visible:border-b-[2px] focus-visible:border-b-[#bc995d] focus-visible:ring-0"
+                                                className="h-12 rounded-none border-b-[3px] border-l-0 border-r-0 border-t-0 border-b-menuprimary-foreground bg-menuforeground outline-none focus-visible:border-b-[2px] focus-visible:border-b-menuprimary focus-visible:ring-0"
                                             />
                                         </FormControl>
                                         <FormMessage />
@@ -193,7 +193,7 @@ const Pickup = () => {
                         </div>
                     </div>
 
-                    <div className="flex w-full flex-col items-start justify-between gap-3 border-b-[2px] border-[#131313] py-3 pb-5">
+                    <div className="flex w-full flex-col items-start justify-between gap-3 border-b-[2px] border-menuprimary py-3 pb-5">
                         <p className="w-full text-xl font-semibold text-[#7A7875]">Pickup Time</p>
                         <div className="flex w-full flex-col gap-3 px-1 py-1">
                             <div
@@ -221,7 +221,7 @@ const Pickup = () => {
                         </div>
                         <div className="w-full rounded-lg">
                             <div className="z-40 flex w-full flex-col gap-2">
-                                <Label htmlFor="note" className="flex cursor-pointer items-center gap-2 text-[#FBEAD2] pt-10">
+                                <Label htmlFor="note" className="flex cursor-pointer items-center gap-2 text-[#7A7875] pt-10">
                                     <Icons.pencil />
                                     Add Note
                                 </Label>
@@ -231,15 +231,15 @@ const Pickup = () => {
                                     value={note}
                                     onChange={(e) => setNote(e.target.value)}
                                     rows={3}
-                                    className="border-none bg-[#0F0F0F] lg:w-4/5"
+                                    className="border-none bg-menuforeground lg:w-4/5"
                                 />
                             </div>
                         </div>
                     </div>
 
                     <div className="flex w-full flex-col pt-7 lg:w-4/5 lg:flex-row">
-                        <div className="w-full bg-menuprimary border-t-[1px] border-t-[#131313] fixed bottom-0 left-0 md:static flex flex-col gap-2 px-3 py-3 md:px-0 md:py-0">
-                            <Button className="h-14 w-full bg-primary text-lg font-bold uppercase tracking-[1px] rounded-none" disabled={isPending}>
+                        <div className="w-full bg-background border-t-[1px] border-t-[#131313] fixed bottom-0 left-0 md:static flex flex-col gap-2 px-3 py-3 md:px-0 md:py-0">
+                            <Button className="h-14 w-full bg-menuprimary text-lg font-bold uppercase tracking-[1px] rounded-none" disabled={isPending}>
                                 Place Pickup Order
                             </Button>
                         </div>

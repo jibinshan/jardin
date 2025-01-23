@@ -6,20 +6,20 @@ import { Button } from "../ui/button";
 import Link from "next/link";
 import { useCart } from "@/context/CartContext";
 import { useRestaurant } from "@/context/RestaurantContext";
-import MenuItemDrawer from "../drawer/MenuItemDrawer";
 
 interface MenuChoosingProps {
     children: React.ReactNode;
     item: MenuItem;
 }
 
-const MenuChoosing: FC<MenuChoosingProps> = ({ children, item }) => {
+const MenuItemMinus: FC<MenuChoosingProps> = ({ children, item }) => {
+
     const [open, setOpen] = useState(false);
-    const { cartItems, repeatItem } = useCart();
+    const { cartItems } = useCart();
     const { items } = useRestaurant();
     const cartitem = cartItems.filter((items) => items._idMenuItem === item._id);
     const modifiers = cartitem[cartitem.length - 1]?.modifiers;
-    const cart = cartitem[cartitem.length - 1];
+
     return (
         <Dialog open={open} onOpenChange={setOpen}>
             <DialogTrigger asChild>{children}</DialogTrigger>
@@ -28,7 +28,7 @@ const MenuChoosing: FC<MenuChoosingProps> = ({ children, item }) => {
                     <DialogTitle>
                         <p className="text-menusecondary">{item.name}</p>
                     </DialogTitle>
-                    <p className="text-menusecondary">Repeat previous customisation?</p>
+                    <p className="text-menusecondary">If you want to decrease Redirect to cart. </p>
                 </DialogHeader>
                 <div className="px-5">
                     <div className="rounded-xl bg-menuforeground px-5 py-6">
@@ -43,33 +43,25 @@ const MenuChoosing: FC<MenuChoosingProps> = ({ children, item }) => {
                 </div>
                 <DialogFooter>
                     <div className="flex w-full items-center justify-center gap-4 px-5 py-5">
-                        <Link href={`/menu/${item._id}`} className="hidden md:block md:w-1/2">
-                            <Button variant="outline" onClick={() => setOpen(false)} className="w-full text-menusecondary">
-                                I&apos;ll Choose
+                        <Button variant="outline" onClick={() => setOpen(false)} className="w-1/2 text-menusecondary md:hidden">
+                            Cancel
+                        </Button>
+
+                        <Link href='/cart' className="w-1/2">
+                            <Button
+                                onClick={() => {
+                                    setOpen(false);
+                                }}
+                                className="w-full bg-menuprimary text-menuforeground hover:bg-buttonhover"
+                            >
+                                Go To Cart
                             </Button>
                         </Link>
-                        <MenuItemDrawer item={item} setChoose={setOpen}>
-                            <Button variant="outline" className="w-1/2 text-menusecondary md:hidden">
-                                I&apos;ll Choose
-                            </Button>
-                        </MenuItemDrawer>
-                        <Button
-                            onClick={() => {
-                                if (cart?._idMenuItem) {
-                                    repeatItem(cart?._idMenuItem)
-
-                                }
-                                setOpen(false);
-                            }}
-                            className="w-1/2 bg-menuprimary text-menuforeground hover:bg-buttonhover"
-                        >
-                            Repeat
-                        </Button>
                     </div>
                 </DialogFooter>
             </DialogContent>
         </Dialog >
-    );
-};
+    )
+}
 
-export default MenuChoosing;
+export default MenuItemMinus

@@ -18,13 +18,13 @@ export default function MenuItem({ item }: { item: MenuItem }) {
         <div className="flex w-full flex-col items-center justify-between gap-4 bg-itembackground p-4">
             <Link className="flex w-full flex-row justify-between gap-4" href={`/menu/${item._id}`}>
                 <div>
-                    <p className="text-lg font-bold text-menuprimary-foreground">
+                    <p className="text-lg font-bold text-menuprimary">
                         {item.name} {item.isVeg && <span className="rounded-full bg-[#46f781] px-2 py-1 text-sm text-white">V</span>}
                     </p>
                     <p className="line-clamp-2 text-sm text-itemdescription">{item.description}</p>
                 </div>
                 <div>
-                    {item.images.length > 0 ? (
+                    {!item.extras.hideMenuThumbNailImages && item.images.length > 0 ? (
                         <Image src={item.images[0]!} className="max-h-28 min-h-28 min-w-28 max-w-28 object-cover" alt={item.name} width={1980} height={1080} />
                     ) : (
                         <div className="h-28 w-28 rounded-md"></div>
@@ -32,7 +32,7 @@ export default function MenuItem({ item }: { item: MenuItem }) {
                 </div>
             </Link>
             <div className="flex w-full flex-row items-center justify-between gap-4">
-                <Link className="rounded-3xl bg-menusecondary-foreground p-2 px-2 py-1 tracking-[1px] text-menuprimary-foreground" href={`/menu/${item._id}`}>
+                <Link className="rounded-3xl bg-menusecondary-foreground p-2 px-2 py-1 tracking-[1px] text-menuprimary" href={`/menu/${item._id}`}>
                     {/* {item.price.currency === "GBP" ? "£" : item.price.currency === "EUR" ? "€" : item.price.currency === "USD" ? "$" : item.price.currency} */}
                     {/* {formattedItemPrice(item.price.value)} */}
 
@@ -51,11 +51,13 @@ export default function MenuItem({ item }: { item: MenuItem }) {
                                     {item.modifiers.length === 0 ? (
                                         <>Free</>
                                     ) : (
-                                        GetModifiersFromItemId(item, items, 0).map((modifier) => {
-                                            if (modifier._id === item.modifiers.find((modifier) => modifier.defaultSelection)?.defaultSelection) {
-                                                return `${getCurrencySymbol(modifier.price.currency)} ${modifier.price.value}`;
-                                            }
-                                        })
+                                        item.modifiers.map((mod, index) => (
+                                            GetModifiersFromItemId(item, items, index).map((modifier) => {
+                                                if (modifier._id === item.modifiers.find((modifier) => modifier.defaultSelection)?.defaultSelection) {
+                                                    return `${getCurrencySymbol(modifier.price.currency)} ${modifier.price.value}`;
+                                                }
+                                            })
+                                        ))
                                     )}
                                 </>
                             )}
@@ -65,7 +67,7 @@ export default function MenuItem({ item }: { item: MenuItem }) {
                 {cartItems.find((cart) => cart._idMenuItem === item._id)?._idMenuItem === item._id ?
                     item && (
                         <MenuChoosing item={item}>
-                            <Button variant="secondary" className="bg-menuprimary px-8 text-lg font-bold text-menusecondary   rounded-none">
+                            <Button variant="secondary" className="bg-menuprimary px-8 text-lg font-bold text-menuforeground hover:bg-menuprimary  rounded-none">
                                 Add
                             </Button>
                         </MenuChoosing>
@@ -73,7 +75,7 @@ export default function MenuItem({ item }: { item: MenuItem }) {
                     :
                     (
                         <Link href={`/menu/${item._id}`}>
-                            <Button variant="secondary" className="bg-menuprimary px-8 text-lg font-bold text-menusecondary rounded-none">
+                            <Button variant="secondary" className="bg-menuprimary px-8 text-lg font-bold text-menuforeground hover:bg-menuprimary rounded-none">
                                 Add
                             </Button>
                         </Link>

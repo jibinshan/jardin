@@ -149,27 +149,27 @@ const Checkout = () => {
             className="flex w-full flex-col gap-4 lg:w-2/3"
           >
             <Button
-              className="w-fit p-0 text-[#FBEAD2] text-lg font-[500] tracking-[1px] hidden md:flex gap-2"
+              className="w-fit p-0 text-menuprimary text-lg font-[500] tracking-[1px] hidden md:flex gap-2"
               onClick={() => router.back()}
               variant="link"
             >
-              <MoveLeft /> <span>Back to Cart</span>
+              <MoveLeft /> <span>Menu</span>
             </Button>
-            <div className="flex w-full flex-col gap-3 border-b-[2px] border-[#131313] py-3 pb-5 lg:flex-row lg:items-center lg:justify-between">
+            <div className="flex w-full flex-col gap-3 border-b-[2px] border-menuprimary py-3 pb-5 lg:flex-row lg:items-center lg:justify-between">
               <p className="text-xl font-semibold text-[#7A7875]">
                 {checkoutType === "delivery" ? "Delivery" : "Pickup"} Details
               </p>
-              <TabsList className="flex h-fit w-fit gap-1 rounded-full bg-[#161616] px-1 py-1">
+              <TabsList className="flex h-fit w-fit gap-1 rounded-full bg-menuforeground px-1 py-1">
                 <TabsTrigger
                   value="pickup"
-                  className="rounded-full bg-transparent px-4 py-3 text-sm font-semibold text-gray-300 data-[state=active]:bg-menuprimary data-[state=active]:text-gray-300"
+                  className="rounded-full bg-transparent px-4 py-3 text-sm font-semibold text-menuprimary data-[state=active]:bg-menuprimary data-[state=active]:text-menuforeground"
                   onClick={() => setCheckoutType("pickup")}
                 >
                   Pickup
                 </TabsTrigger>
                 {/* <TabsTrigger
                   value="delivery"
-                  className="rounded-full bg-transparent px-4 py-3 text-sm font-semibold text-gray-300 data-[state=active]:bg-menuprimary data-[state=active]:text-gray-300"
+                  className="rounded-full bg-transparent px-4 py-3 text-sm font-semibold text-menuprimary data-[state=active]:bg-menuprimary data-[state=active]:text-menuforeground"
                   onClick={() => setCheckoutType("delivery")}
                 >
                   Delivery
@@ -249,7 +249,7 @@ const Checkout = () => {
                           />
                         )}
                         <div className="flex flex-col justify-between py-1">
-                          <p className="line-clamp-1 text-lg font-normal text-[#FBEAD2]">
+                          <p className="line-clamp-1 text-lg font-normal text-menuprimary">
                             {item.name}
                           </p>
                           {/* {item.description && (
@@ -267,7 +267,7 @@ const Checkout = () => {
                               </div>
                             );
                           })}
-                          <p className="text-lg font-normal text-[#FBEAD2]">
+                          <p className="text-lg font-normal text-menuprimary">
                             {getCurrencySymbol(item.price.currency)}{" "}
                             {formattedItemPrice(item.price.value)}
                           </p>
@@ -288,9 +288,9 @@ const Checkout = () => {
                   <div className="flex gap-2">
                     <Input
                       placeholder="Gift or discount code"
-                      className="h-12 rounded-none border-b-[3px] border-l-0 border-r-0 border-t-0 border-b-[#323232] bg-[#0c0c0c] outline-none focus-visible:border-b-[2px] focus-visible:border-b-[#bc995d] focus-visible:ring-0"
+                      className="h-12 rounded-none border-b-[3px] border-l-0 border-r-0 border-t-0 border-b-[#323232] bg-menuforeground outline-none focus-visible:border-b-[2px] focus-visible:border-b-[#bc995d] focus-visible:ring-0"
                     />
-                    <Button className="h-12 bg-[#bc995d] text-white">Apply</Button>
+                    <Button className="h-12">Apply</Button>
                   </div>
                   <div className="flex justify-between">
                     <p className="text-sm font-semibold">Service Charge</p>

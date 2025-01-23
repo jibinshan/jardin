@@ -76,7 +76,7 @@ export const RestaurantProvider: React.FC<{ children: React.ReactNode }> = ({ ch
       }> = await axios.get(`${apiUrl}/restaurant/${restaurantID}/category?pageSize=30000&pageNum=1&filter_enabled=true`);
       const data = res.data.data.rows;
       const sortedData = data
-        // .filter((item) => item.name.toLowerCase() !== "modifiers")
+        .filter((item) => item.name.toLowerCase() !== "modifier" && item.name.toLowerCase() !== "modifiers" && item.name.toLowerCase() !== "extras")
         .filter((item) => item.order)
         .sort((a, b) => a.order - b.order);
       return sortedData;

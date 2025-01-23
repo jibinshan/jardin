@@ -32,6 +32,7 @@ export interface MenuItem {
         availability: {
             days: string[];
         };
+        hideMenuThumbNailImages: boolean;
     };
     modifiers: Modifier[];
     options: any[]; // TODO: Define options type if needed

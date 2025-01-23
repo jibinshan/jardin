@@ -173,8 +173,8 @@ export default function MenuMobile() {
                   className={cn(
                     "h-12 shrink-0 rounded-none text-base font-extrabold transition-colors",
                     activeCategory === category._id
-                      ? "bg-menuprimary text-menusecondary"
-                      : "bg-transparent text-menusecondary hover:bg-primary/80",
+                      ? "bg-menuprimary text-menuforeground hover:bg-menuprimary hover:text-menuforeground"
+                      : "bg-transparent text-menuprimary border-[1px] border-menuprimary hover:bg-transparent hover:text-menuprimary",
                   )}
                 >
                   {category.name}
@@ -195,7 +195,7 @@ export default function MenuMobile() {
                 }}
                 className="scroll-mt-20"
               >
-                <h2 className={cn("pb-3 text-2xl font-bold text-menusecondary",
+                <h2 className={cn("pb-3 text-2xl font-bold text-menuprimary",
                   category.items.length === 0 && "hidden pb-0"
                 )}>
                   {category.name}

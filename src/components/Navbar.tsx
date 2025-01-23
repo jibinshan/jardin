@@ -33,7 +33,7 @@ const Navbar = ({
       className={cn(
         `${position} top-0 z-50 flex h-[10vh] w-full flex-col bg-transparent px-4 md:px-0 transition-all duration-0 ease-in-out justify-between items-center overflow-hidden`,
         isScrolled && "bg-transparent border-b-0",
-        pathname !== "/" && "bg-transparent border-b-0",
+        pathname !== "/" && "bg-[#036538] border-b-0",
       )}
     >
       <div
