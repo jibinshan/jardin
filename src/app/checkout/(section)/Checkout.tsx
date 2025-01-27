@@ -182,7 +182,7 @@ const Checkout = () => {
               ) : !isPickupNow ? (
                 <p>Pickup is unavailable at the moment.</p>
               ) : restaurant?.minimumCollectionOrderAmount &&
-                restaurant?.minimumCollectionOrderAmount <
+                restaurant?.minimumCollectionOrderAmount >
                 cartValue() +
                 calculateServiceCharge(
                   cartValue(),
@@ -202,7 +202,7 @@ const Checkout = () => {
               ) : !isDeliveryNow ? (
                 <p>Delivery is unavailable at the moment.</p>
               ) : restaurant?.minimumDeliveryOrderAmount &&
-                restaurant?.minimumDeliveryOrderAmount <
+                restaurant?.minimumDeliveryOrderAmount >
                 cartValue() +
                 calculateServiceCharge(
                   cartValue(),

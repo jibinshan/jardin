@@ -7,18 +7,22 @@ import { useRestaurant } from "@/context/RestaurantContext";
 import { formattedItemPrice } from "@/lib/formatted-item-price";
 import { getCurrencySymbol } from "@/lib/get-currency-symbol";
 import { GetModifiersFromItemId } from "@/lib/get-modifiers-from-item-id";
+import { isRestaurantOpen } from "@/lib/is-restaurant-open";
 import type { MenuItem } from "@/types/menu";
+import { format } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function MenuItem({ item }: { item: MenuItem }) {
-    const { items } = useRestaurant();
-    const { cartItems } = useCart()
+    const { items, restaurant } = useRestaurant();
+    const { cartItems } = useCart();
+    const isOpen = isRestaurantOpen(restaurant);
+
     return (
         <div className="flex w-full flex-col items-center justify-between gap-4 bg-itembackground p-4">
             <Link className="flex w-full flex-row justify-between gap-4" href={`/menu/${item._id}`}>
                 <div>
-                    <p className="text-lg font-bold text-menuprimary">
+                    <p className="text-lg font-bold text-white">
                         {item.name} {item.isVeg && <span className="rounded-full bg-[#46f781] px-2 py-1 text-sm text-white">V</span>}
                     </p>
                     <p className="line-clamp-2 text-sm text-itemdescription">{item.description}</p>
@@ -33,9 +37,6 @@ export default function MenuItem({ item }: { item: MenuItem }) {
             </Link>
             <div className="flex w-full flex-row items-center justify-between gap-4">
                 <Link className="rounded-3xl bg-menusecondary-foreground p-2 px-2 py-1 tracking-[1px] text-menuprimary" href={`/menu/${item._id}`}>
-                    {/* {item.price.currency === "GBP" ? "£" : item.price.currency === "EUR" ? "€" : item.price.currency === "USD" ? "$" : item.price.currency} */}
-                    {/* {formattedItemPrice(item.price.value)} */}
-
                     {item.takeawayPrice.value > 0 ? (
                         <>
                             {getCurrencySymbol(item.takeawayPrice.currency)} {formattedItemPrice(item.takeawayPrice.value)}
@@ -51,37 +52,38 @@ export default function MenuItem({ item }: { item: MenuItem }) {
                                     {item.modifiers.length === 0 ? (
                                         <>Free</>
                                     ) : (
-                                        item.modifiers.map((mod, index) => (
+                                        item.modifiers.map((mod, index) =>
                                             GetModifiersFromItemId(item, items, index).map((modifier) => {
                                                 if (modifier._id === item.modifiers.find((modifier) => modifier.defaultSelection)?.defaultSelection) {
                                                     return `${getCurrencySymbol(modifier.price.currency)} ${modifier.price.value}`;
                                                 }
                                             })
-                                        ))
+                                        )
                                     )}
                                 </>
                             )}
                         </>
                     )}
                 </Link>
-                {cartItems.find((cart) => cart._idMenuItem === item._id)?._idMenuItem === item._id ?
-                    item && (
-                        <MenuChoosing item={item}>
-                            <Button variant="secondary" className="bg-menuprimary px-8 text-lg font-bold text-menuforeground hover:bg-menuprimary  rounded-none">
-                                Add
-                            </Button>
-                        </MenuChoosing>
-                    )
-                    :
-                    (
+                {isOpen &&
+                    item.extras?.availability?.days.includes(format(Date.now(), "EEEE").toLowerCase()) &&
+                    item.extras?.menuItemOrderType === "both" &&
+                    (cartItems.find((cart) => cart._idMenuItem === item._id)?._idMenuItem === item._id ? (
+                        item && (
+                            <MenuChoosing item={item}>
+                                <Button variant="secondary" className="rounded-none bg-menuprimary px-8 text-lg font-bold text-menuforeground hover:bg-menuprimary">
+                                    Add
+                                </Button>
+                            </MenuChoosing>
+                        )
+                    ) : (
                         <Link href={`/menu/${item._id}`}>
-                            <Button variant="secondary" className="bg-menuprimary px-8 text-lg font-bold text-menuforeground hover:bg-menuprimary rounded-none">
+                            <Button variant="secondary" className="rounded-none bg-menuprimary px-8 text-lg font-bold text-menuforeground hover:bg-menuprimary">
                                 Add
                             </Button>
                         </Link>
-                    )
-                }
+                    ))}
             </div>
-        </div >
+        </div>
     );
 }
